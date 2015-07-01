@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>640284C3-AC11-4690-8BEE-0D3E29F1F58C</string>
+	<key>IDESourceControlProjectName</key>
+	<string>GamificationLib</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>23D6F3F6ABAF924CB0DEB08896BDDA3395311054</key>
+		<string>https://github.com/jawadashraf1/gamificationframework---iOS.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>GamificationLib.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>23D6F3F6ABAF924CB0DEB08896BDDA3395311054</key>
+		<string>..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/jawadashraf1/gamificationframework---iOS.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>23D6F3F6ABAF924CB0DEB08896BDDA3395311054</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>23D6F3F6ABAF924CB0DEB08896BDDA3395311054</string>
+			<key>IDESourceControlWCCName</key>
+			<string>Gamification</string>
+		</dict>
+	</array>
+</dict>
+</plist>
