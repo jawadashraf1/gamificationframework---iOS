@@ -1,0 +1,444 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1D85583F29BE59E569C9D641 /* libPods-GamificationLib.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FAF9851FA8376A4558BEB0A4 /* libPods-GamificationLib.a */; };
+		F125FC741B415AD700340306 /* GamificationLib.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = F125FC731B415AD700340306 /* GamificationLib.h */; };
+		F125FC761B415AD700340306 /* GamificationLib.m in Sources */ = {isa = PBXBuildFile; fileRef = F125FC751B415AD700340306 /* GamificationLib.m */; };
+		F125FCA31B415C6400340306 /* GHActionButton.m in Sources */ = {isa = PBXBuildFile; fileRef = F125FC8D1B415C6400340306 /* GHActionButton.m */; };
+		F125FCA41B415C6400340306 /* PSAction.m in Sources */ = {isa = PBXBuildFile; fileRef = F125FC901B415C6400340306 /* PSAction.m */; };
+		F125FCA51B415C6400340306 /* PSActionResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = F125FC921B415C6400340306 /* PSActionResponse.m */; };
+		F125FCA61B415C6400340306 /* PSAlertUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = F125FC941B415C6400340306 /* PSAlertUtil.m */; };
+		F125FCA71B415C6400340306 /* PSAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = F125FC961B415C6400340306 /* PSAlertView.m */; };
+		F125FCA81B415C6400340306 /* PSAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = F125FC991B415C6400340306 /* PSAPI.m */; };
+		F125FCA91B415C6400340306 /* PSDateTimeUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = F125FC9B1B415C6400340306 /* PSDateTimeUtil.m */; };
+		F125FCAA1B415C6400340306 /* PSHTTPClient.m in Sources */ = {isa = PBXBuildFile; fileRef = F125FC9D1B415C6400340306 /* PSHTTPClient.m */; };
+		F125FCAB1B415C6400340306 /* PSLevelInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = F125FC9F1B415C6400340306 /* PSLevelInfo.m */; };
+		F125FCAC1B415C6400340306 /* PSPointSystemAction.m in Sources */ = {isa = PBXBuildFile; fileRef = F125FCA21B415C6400340306 /* PSPointSystemAction.m */; };
+		F125FCB81B4160A800340306 /* ActionButtons.m in Sources */ = {isa = PBXBuildFile; fileRef = F125FCB51B4160A800340306 /* ActionButtons.m */; };
+		F125FCB91B4160A800340306 /* ActionButtons+DAO.m in Sources */ = {isa = PBXBuildFile; fileRef = F125FCB71B4160A800340306 /* ActionButtons+DAO.m */; };
+		F125FCC21B41649200340306 /* gamification_db.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F125FCC01B41649200340306 /* gamification_db.xcdatamodeld */; };
+		F13A3A0D1B427E210075CBC0 /* PSUserBadgesAndLevels.m in Sources */ = {isa = PBXBuildFile; fileRef = F13A3A0C1B427E210075CBC0 /* PSUserBadgesAndLevels.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		F125FC6E1B415AD700340306 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+				F125FC741B415AD700340306 /* GamificationLib.h in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		17A13EB0AB323533AE5F7BAF /* Pods-GamificationLib.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GamificationLib.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GamificationLib/Pods-GamificationLib.debug.xcconfig"; sourceTree = "<group>"; };
+		F125FC701B415AD700340306 /* libGamificationLib.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libGamificationLib.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		F125FC731B415AD700340306 /* GamificationLib.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GamificationLib.h; sourceTree = "<group>"; };
+		F125FC751B415AD700340306 /* GamificationLib.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GamificationLib.m; sourceTree = "<group>"; };
+		F125FC811B415AD700340306 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F125FC8C1B415C6400340306 /* GHActionButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GHActionButton.h; sourceTree = "<group>"; };
+		F125FC8D1B415C6400340306 /* GHActionButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GHActionButton.m; sourceTree = "<group>"; };
+		F125FC8E1B415C6400340306 /* PointsSystem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PointsSystem.h; sourceTree = "<group>"; };
+		F125FC8F1B415C6400340306 /* PSAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PSAction.h; sourceTree = "<group>"; };
+		F125FC901B415C6400340306 /* PSAction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSAction.m; sourceTree = "<group>"; };
+		F125FC911B415C6400340306 /* PSActionResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PSActionResponse.h; sourceTree = "<group>"; };
+		F125FC921B415C6400340306 /* PSActionResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSActionResponse.m; sourceTree = "<group>"; };
+		F125FC931B415C6400340306 /* PSAlertUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PSAlertUtil.h; sourceTree = "<group>"; };
+		F125FC941B415C6400340306 /* PSAlertUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSAlertUtil.m; sourceTree = "<group>"; };
+		F125FC951B415C6400340306 /* PSAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PSAlertView.h; sourceTree = "<group>"; };
+		F125FC961B415C6400340306 /* PSAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSAlertView.m; sourceTree = "<group>"; };
+		F125FC971B415C6400340306 /* PSAlertView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PSAlertView.xib; sourceTree = "<group>"; };
+		F125FC981B415C6400340306 /* PSAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PSAPI.h; sourceTree = "<group>"; };
+		F125FC991B415C6400340306 /* PSAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSAPI.m; sourceTree = "<group>"; };
+		F125FC9A1B415C6400340306 /* PSDateTimeUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PSDateTimeUtil.h; sourceTree = "<group>"; };
+		F125FC9B1B415C6400340306 /* PSDateTimeUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSDateTimeUtil.m; sourceTree = "<group>"; };
+		F125FC9C1B415C6400340306 /* PSHTTPClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PSHTTPClient.h; sourceTree = "<group>"; };
+		F125FC9D1B415C6400340306 /* PSHTTPClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSHTTPClient.m; sourceTree = "<group>"; };
+		F125FC9E1B415C6400340306 /* PSLevelInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PSLevelInfo.h; sourceTree = "<group>"; };
+		F125FC9F1B415C6400340306 /* PSLevelInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSLevelInfo.m; sourceTree = "<group>"; };
+		F125FCA01B415C6400340306 /* PSPointsSystemConstant.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PSPointsSystemConstant.h; sourceTree = "<group>"; };
+		F125FCA11B415C6400340306 /* PSPointSystemAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PSPointSystemAction.h; sourceTree = "<group>"; };
+		F125FCA21B415C6400340306 /* PSPointSystemAction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSPointSystemAction.m; sourceTree = "<group>"; };
+		F125FCB41B4160A800340306 /* ActionButtons.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActionButtons.h; sourceTree = "<group>"; };
+		F125FCB51B4160A800340306 /* ActionButtons.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActionButtons.m; sourceTree = "<group>"; };
+		F125FCB61B4160A800340306 /* ActionButtons+DAO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ActionButtons+DAO.h"; sourceTree = "<group>"; };
+		F125FCB71B4160A800340306 /* ActionButtons+DAO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ActionButtons+DAO.m"; sourceTree = "<group>"; };
+		F125FCC11B41649200340306 /* gamification_db.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = gamification_db.xcdatamodel; sourceTree = "<group>"; };
+		F13A3A0B1B427E210075CBC0 /* PSUserBadgesAndLevels.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PSUserBadgesAndLevels.h; sourceTree = "<group>"; };
+		F13A3A0C1B427E210075CBC0 /* PSUserBadgesAndLevels.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSUserBadgesAndLevels.m; sourceTree = "<group>"; };
+		FAF9851FA8376A4558BEB0A4 /* libPods-GamificationLib.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-GamificationLib.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FD85DAD0A625C62E3D547812 /* Pods-GamificationLib.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GamificationLib.release.xcconfig"; path = "Pods/Target Support Files/Pods-GamificationLib/Pods-GamificationLib.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F125FC6D1B415AD700340306 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1D85583F29BE59E569C9D641 /* libPods-GamificationLib.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		DF4E163EA138E185A22A30E7 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				17A13EB0AB323533AE5F7BAF /* Pods-GamificationLib.debug.xcconfig */,
+				FD85DAD0A625C62E3D547812 /* Pods-GamificationLib.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		F125FC671B415AD700340306 = {
+			isa = PBXGroup;
+			children = (
+				F125FC721B415AD700340306 /* GamificationLib */,
+				F125FC7F1B415AD700340306 /* GamificationLibTests */,
+				F125FC711B415AD700340306 /* Products */,
+				DF4E163EA138E185A22A30E7 /* Pods */,
+				FC1BBD9B316052FF0555182A /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		F125FC711B415AD700340306 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F125FC701B415AD700340306 /* libGamificationLib.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F125FC721B415AD700340306 /* GamificationLib */ = {
+			isa = PBXGroup;
+			children = (
+				F125FCB31B4160A200340306 /* Dao */,
+				F125FC8A1B415C5B00340306 /* Lib */,
+				F125FC731B415AD700340306 /* GamificationLib.h */,
+				F125FC751B415AD700340306 /* GamificationLib.m */,
+				F125FCC01B41649200340306 /* gamification_db.xcdatamodeld */,
+			);
+			path = GamificationLib;
+			sourceTree = "<group>";
+		};
+		F125FC7F1B415AD700340306 /* GamificationLibTests */ = {
+			isa = PBXGroup;
+			children = (
+				F125FC801B415AD700340306 /* Supporting Files */,
+			);
+			path = GamificationLibTests;
+			sourceTree = "<group>";
+		};
+		F125FC801B415AD700340306 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				F125FC811B415AD700340306 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F125FC8A1B415C5B00340306 /* Lib */ = {
+			isa = PBXGroup;
+			children = (
+				F13A3A0B1B427E210075CBC0 /* PSUserBadgesAndLevels.h */,
+				F13A3A0C1B427E210075CBC0 /* PSUserBadgesAndLevels.m */,
+				F125FC8C1B415C6400340306 /* GHActionButton.h */,
+				F125FC8D1B415C6400340306 /* GHActionButton.m */,
+				F125FC8E1B415C6400340306 /* PointsSystem.h */,
+				F125FC8F1B415C6400340306 /* PSAction.h */,
+				F125FC901B415C6400340306 /* PSAction.m */,
+				F125FC911B415C6400340306 /* PSActionResponse.h */,
+				F125FC921B415C6400340306 /* PSActionResponse.m */,
+				F125FC931B415C6400340306 /* PSAlertUtil.h */,
+				F125FC941B415C6400340306 /* PSAlertUtil.m */,
+				F125FC951B415C6400340306 /* PSAlertView.h */,
+				F125FC961B415C6400340306 /* PSAlertView.m */,
+				F125FC971B415C6400340306 /* PSAlertView.xib */,
+				F125FC981B415C6400340306 /* PSAPI.h */,
+				F125FC991B415C6400340306 /* PSAPI.m */,
+				F125FC9A1B415C6400340306 /* PSDateTimeUtil.h */,
+				F125FC9B1B415C6400340306 /* PSDateTimeUtil.m */,
+				F125FC9C1B415C6400340306 /* PSHTTPClient.h */,
+				F125FC9D1B415C6400340306 /* PSHTTPClient.m */,
+				F125FC9E1B415C6400340306 /* PSLevelInfo.h */,
+				F125FC9F1B415C6400340306 /* PSLevelInfo.m */,
+				F125FCA01B415C6400340306 /* PSPointsSystemConstant.h */,
+				F125FCA11B415C6400340306 /* PSPointSystemAction.h */,
+				F125FCA21B415C6400340306 /* PSPointSystemAction.m */,
+			);
+			name = Lib;
+			sourceTree = "<group>";
+		};
+		F125FCB31B4160A200340306 /* Dao */ = {
+			isa = PBXGroup;
+			children = (
+				F125FCB41B4160A800340306 /* ActionButtons.h */,
+				F125FCB51B4160A800340306 /* ActionButtons.m */,
+				F125FCB61B4160A800340306 /* ActionButtons+DAO.h */,
+				F125FCB71B4160A800340306 /* ActionButtons+DAO.m */,
+			);
+			name = Dao;
+			sourceTree = "<group>";
+		};
+		FC1BBD9B316052FF0555182A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FAF9851FA8376A4558BEB0A4 /* libPods-GamificationLib.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F125FC6F1B415AD700340306 /* GamificationLib */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F125FC841B415AD700340306 /* Build configuration list for PBXNativeTarget "GamificationLib" */;
+			buildPhases = (
+				33B7E93A8F4A612AD4CCD044 /* Check Pods Manifest.lock */,
+				F125FC6C1B415AD700340306 /* Sources */,
+				F125FC6D1B415AD700340306 /* Frameworks */,
+				F125FC6E1B415AD700340306 /* CopyFiles */,
+				341442E9E16007A175CECB94 /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = GamificationLib;
+			productName = GamificationLib;
+			productReference = F125FC701B415AD700340306 /* libGamificationLib.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F125FC681B415AD700340306 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0610;
+				ORGANIZATIONNAME = EurekaTechStudio;
+				TargetAttributes = {
+					F125FC6F1B415AD700340306 = {
+						CreatedOnToolsVersion = 6.1;
+					};
+				};
+			};
+			buildConfigurationList = F125FC6B1B415AD700340306 /* Build configuration list for PBXProject "GamificationLib" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = F125FC671B415AD700340306;
+			productRefGroup = F125FC711B415AD700340306 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F125FC6F1B415AD700340306 /* GamificationLib */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		33B7E93A8F4A612AD4CCD044 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		341442E9E16007A175CECB94 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GamificationLib/Pods-GamificationLib-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F125FC6C1B415AD700340306 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F125FCAC1B415C6400340306 /* PSPointSystemAction.m in Sources */,
+				F125FCA31B415C6400340306 /* GHActionButton.m in Sources */,
+				F125FCAB1B415C6400340306 /* PSLevelInfo.m in Sources */,
+				F125FCA91B415C6400340306 /* PSDateTimeUtil.m in Sources */,
+				F125FCA51B415C6400340306 /* PSActionResponse.m in Sources */,
+				F125FCA61B415C6400340306 /* PSAlertUtil.m in Sources */,
+				F125FC761B415AD700340306 /* GamificationLib.m in Sources */,
+				F13A3A0D1B427E210075CBC0 /* PSUserBadgesAndLevels.m in Sources */,
+				F125FCAA1B415C6400340306 /* PSHTTPClient.m in Sources */,
+				F125FCA71B415C6400340306 /* PSAlertView.m in Sources */,
+				F125FCB91B4160A800340306 /* ActionButtons+DAO.m in Sources */,
+				F125FCC21B41649200340306 /* gamification_db.xcdatamodeld in Sources */,
+				F125FCB81B4160A800340306 /* ActionButtons.m in Sources */,
+				F125FCA41B415C6400340306 /* PSAction.m in Sources */,
+				F125FCA81B415C6400340306 /* PSAPI.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		F125FC821B415AD700340306 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		F125FC831B415AD700340306 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F125FC851B415AD700340306 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 17A13EB0AB323533AE5F7BAF /* Pods-GamificationLib.debug.xcconfig */;
+			buildSettings = {
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		F125FC861B415AD700340306 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FD85DAD0A625C62E3D547812 /* Pods-GamificationLib.release.xcconfig */;
+			buildSettings = {
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F125FC6B1B415AD700340306 /* Build configuration list for PBXProject "GamificationLib" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F125FC821B415AD700340306 /* Debug */,
+				F125FC831B415AD700340306 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F125FC841B415AD700340306 /* Build configuration list for PBXNativeTarget "GamificationLib" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F125FC851B415AD700340306 /* Debug */,
+				F125FC861B415AD700340306 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		F125FCC01B41649200340306 /* gamification_db.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				F125FCC11B41649200340306 /* gamification_db.xcdatamodel */,
+			);
+			currentVersion = F125FCC11B41649200340306 /* gamification_db.xcdatamodel */;
+			path = gamification_db.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = F125FC681B415AD700340306 /* Project object */;
+}
