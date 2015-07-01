@@ -17,7 +17,7 @@ Pod::Spec.new do |s|
 
   s.name         = "GamificationLib"
   s.version      = "0.0.1"
-  s.summary      = "A short description of GamificationLib."
+  s.summary      = "This library can only be used for gamification."
 
   s.description  = <<-DESC
                    A longer description of GamificationLib in Markdown format.
@@ -28,7 +28,7 @@ Pod::Spec.new do |s|
                    * Finally, don't worry about the indent, CocoaPods strips it!
                    DESC
 
-  s.homepage     = "http://EXAMPLE/GamificationLib"
+  s.homepage     = "http://teensystudios.com/gamification/admin/login"
   # s.screenshots  = "www.example.com/screenshots_1.gif", "www.example.com/screenshots_2.gif"
 
 
@@ -53,9 +53,9 @@ Pod::Spec.new do |s|
   #  profile URL.
   #
 
-  s.author             = { "Azeem Akram" => "azeem.akram.eureka@gmail.com" }
-  # Or just: s.author    = "Azeem Akram"
-  # s.authors            = { "Azeem Akram" => "azeem.akram.eureka@gmail.com" }
+  s.author             = { "Jawad Ashraf" => "janoon@gmail.com" }
+  # Or just: s.author    = "Jawad Ashraf"
+  # s.authors            = { "Jawad Ashraf" => "janoon@gmail.com" }
   # s.social_media_url   = "http://twitter.com/Azeem Akram"
 
   # ――― Platform Specifics ――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -78,7 +78,7 @@ Pod::Spec.new do |s|
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  s.source       = { :git => "http://EXAMPLE/GamificationLib.git", :tag => "0.0.1" }
+  s.source       = { :git => "https://github.com/jawadashraf1/gamificationframework---iOS.git", :tag => "0.0.1" }
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
