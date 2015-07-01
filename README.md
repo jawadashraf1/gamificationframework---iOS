@@ -5,8 +5,9 @@ Integrating Gamification Library
 	•	Install GamificationLib pods
 	•	Include the #import <GamificationLib/GamificationLib.h> in GetHot-Prefix.pch
 	•	Initialize PSPointSystemAction class with Secret Key and User Id.
-
-
+	
+	 [[PSPointSystemAction sharedAction] initWithKey:@"GAMIFICATION_KEY" andUserId:@"USER_ID"];
+ 
 How to make library work with Actions:
 
 	•	Go to admin site and add an Action. http://teensystudios.com/gamification/admin/login
