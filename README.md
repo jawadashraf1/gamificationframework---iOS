@@ -1,5 +1,7 @@
 # gamificationframework---iOS
 
+pod 'GamificationLib'
+
 Integrating Gamification Library
 
 	•	Install GamificationLib pods
