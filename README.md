@@ -17,3 +17,13 @@ How to make library work with Actions:
 	•	In iOS application, set the button tag with the value in button_tag parameter.
 	•	Change the class of button from UIButton to GHActionButton. Thats All.
 
+
+Get user earned Badges:
+
+    [PSUserBadgesAndLevels getUserBadgesAndLevels:YES completion:^(id object, NSString *error) {
+    }];
+
+Get Badges detail:
+
+    [PSLevelInfo getLevelsInfo:^(id object, NSString *error) { 
+    }];
