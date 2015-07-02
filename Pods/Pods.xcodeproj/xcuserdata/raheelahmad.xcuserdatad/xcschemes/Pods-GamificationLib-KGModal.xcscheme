@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "601553A2A0C1B7B7DACC8591"
+               BlueprintIdentifier = "F6D1F56A5B7DF620CF62065B"
                BuildableName = "libPods-GamificationLib-KGModal.a"
                BlueprintName = "Pods-GamificationLib-KGModal"
                ReferencedContainer = "container:Pods.xcodeproj">
