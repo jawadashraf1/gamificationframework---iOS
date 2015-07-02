@@ -6,7 +6,7 @@ target 'GamificationLib' do
 pod 'AFNetworking'
 pod 'MagicalRecord'
 pod 'JSONModel'
-pod 'SDWebImage', '~>3.7.1'
+pod 'SDWebImage'
 pod 'KGModal'
 
 end

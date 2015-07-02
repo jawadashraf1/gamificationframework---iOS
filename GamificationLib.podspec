@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "GamificationLib"
-  s.version      = "0.0.1"
+  s.version      = "0.0.2"
   s.summary      = "This library can only be used for gamification."
 
   s.description  = <<-DESC
@@ -39,7 +39,21 @@ Pod::Spec.new do |s|
   #  Popular ones are 'MIT', 'BSD' and 'Apache License, Version 2.0'.
   #
 
-  s.license      = "MIT (example)"
+  s.license      = { :type => 'Gamification', :text => <<-LICENSE
+    Licensed under the Gamification, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+    http://teensystudios.com/gamification/admin/login
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+    LICENSE
+  }
+  
   # s.license      = { :type => "MIT", :file => "FILE_LICENSE" }
 
 
@@ -69,7 +83,7 @@ Pod::Spec.new do |s|
 
   #  When using multiple platforms
    s.ios.deployment_target = "6.1"
-   s.osx.deployment_target = "10.7"
+  #  s.osx.deployment_target = "10.7"
 
 
   # ――― Source Location ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -78,7 +92,7 @@ Pod::Spec.new do |s|
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  s.source       = { :git => "https://github.com/jawadashraf1/gamificationframework---iOS.git", :tag => "0.0.1" }
+  s.source       = { :git => "https://github.com/jawadashraf1/gamificationframework---iOS.git", :tag => "0.0.2" }
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -139,7 +153,7 @@ Pod::Spec.new do |s|
   s.dependency 'AFNetworking'
   s.dependency 'MagicalRecord'
   s.dependency 'JSONModel'
-  s.dependency 'SDWebImage', '~>3.7.1'
+  s.dependency 'SDWebImage'
   s.dependency 'KGModal'	
 
 end

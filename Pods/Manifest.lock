@@ -32,7 +32,7 @@ DEPENDENCIES:
   - JSONModel
   - KGModal
   - MagicalRecord
-  - SDWebImage (~> 3.7.1)
+  - SDWebImage
 
 SPEC CHECKSUMS:
   AFNetworking: 05edc0ac4c4c8cf57bcf4b84be5b0744b6d8e71e
@@ -41,4 +41,4 @@ SPEC CHECKSUMS:
   MagicalRecord: 89eb7d7ead39fb37f01c3d010665ee94d17f8dba
   SDWebImage: 71b7cdc1d1721d6a82ed62889030225f2c249e29
 
-COCOAPODS: 0.36.1
+COCOAPODS: 0.37.2
