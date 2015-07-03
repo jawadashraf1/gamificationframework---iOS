@@ -1,12 +1,15 @@
 # gamificationframework---iOS
 
+pod 'GamificationLib'
+
 Integrating Gamification Library
 
 	•	Install GamificationLib pods
 	•	Include the #import <GamificationLib/GamificationLib.h> in GetHot-Prefix.pch
 	•	Initialize PSPointSystemAction class with Secret Key and User Id.
-
-
+	
+	 [[PSPointSystemAction sharedAction] initWithKey:@"GAMIFICATION_KEY" andUserId:@"USER_ID"];
+ 
 How to make library work with Actions:
 
 	•	Go to admin site and add an Action. http://teensystudios.com/gamification/admin/login
@@ -14,3 +17,13 @@ How to make library work with Actions:
 	•	In iOS application, set the button tag with the value in button_tag parameter.
 	•	Change the class of button from UIButton to GHActionButton. Thats All.
 
+
+Get user earned Badges:
+
+    [PSUserBadgesAndLevels getUserBadgesAndLevels:YES completion:^(id object, NSString *error) {
+    }];
+
+Get Badges detail:
+
+    [PSLevelInfo getLevelsInfo:^(id object, NSString *error) { 
+    }];
