@@ -25,8 +25,6 @@ Example:
 	}
 
 
-
-
 Get user earned Badges:
 
     [PSUserBadgesAndLevels getUserBadgesAndLevels:YES completion:^(id object, NSString *error) {
