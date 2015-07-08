@@ -13,9 +13,17 @@ Integrating Gamification Library
 How to make library work with Actions:
 
 	•	Go to admin site and add an Action. http://teensystudios.com/gamification/admin/login
-	•	Check for its button_tag parameter after adding an action.
-	•	In iOS application, set the button tag with the value in button_tag parameter.
-	•	Change the class of button from UIButton to GHActionButton. Thats All.
+	•	Check for its Action Identifier after adding an action.
+	•	In iOS application, write the Button Action Method with the name of Action Identifier.
+	•	In this method, call the method [[PSPointSystemAction sharedAction] performActionToLog].
+	•	Thats All.
+
+Example:
+-(void)EXERCISE_ACTION{
+    [[PSPointSystemAction sharedAction] performActionToLog];
+}
+
+
 
 
 Get user earned Badges:
