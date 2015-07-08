@@ -29,7 +29,7 @@
 
 -(void)buttonClicked{
     NSLog(@"Action Button is tapped");
-    [[PSPointSystemAction sharedAction] performActionWithKey:(int)self.tag];
+//    [[PSPointSystemAction sharedAction] performActionWithKey:(int)self.tag];
 }
 
 

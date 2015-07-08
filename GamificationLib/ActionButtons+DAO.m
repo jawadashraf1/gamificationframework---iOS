@@ -29,7 +29,8 @@
 
 +(ActionButtons *) getActionInfo:(NSString *) identifier user_id:(NSNumber *) user_id{
 //    NSPredicate * predicate = [NSPredicate predicateWithFormat:@"(identifier = %@) AND (user_id = %@)",identifier,user_id];
-    NSPredicate * predicate = [NSPredicate predicateWithFormat:@"button_tag = %@",user_id];
+//    NSPredicate * predicate = [NSPredicate predicateWithFormat:@"button_tag = %@",user_id];
+    NSPredicate * predicate = [NSPredicate predicateWithFormat:@"identifier ==[c] %@",identifier];
     NSArray * list          = [ActionButtons MR_findAllWithPredicate:predicate];
     
     ActionButtons * actionButtons = nil;

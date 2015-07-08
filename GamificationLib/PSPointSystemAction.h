@@ -29,7 +29,7 @@ typedef enum {
 
 -(id)initWithKey:(NSString *)z_SecretKey andUserId:(NSNumber *)z_userId;
 +(PSPointSystemAction *) sharedAction;
--(void)performActionWithKey:(int)key;
+-(void)performActionToLog;
 -(void) performAction:(NSString *) action;
 
 @end

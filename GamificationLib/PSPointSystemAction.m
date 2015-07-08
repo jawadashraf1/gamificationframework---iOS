@@ -45,11 +45,29 @@
     return _sharedClient;
 }
 
--(void)performActionWithKey:(int)key{
+-(NSString *) getParentMethoName{
+    
+    NSArray *callStack      = [NSThread callStackSymbols];
+    NSString *sourceString  = [callStack objectAtIndex:2];
+    NSRange start           = [sourceString rangeOfString:@"["];
+    NSRange end             = [sourceString rangeOfString:@"]"];
+    sourceString            = [sourceString substringWithRange:NSMakeRange(start.location+1, end.location-(start.location+1))];
+    NSArray *array          = [sourceString componentsSeparatedByString:@" "];
+    NSString *parentMethodName = array[1];
+    if([parentMethodName rangeOfString:@":"].location != NSNotFound) {
+        parentMethodName = [parentMethodName substringToIndex:[parentMethodName rangeOfString:@":"].location];
+    }
+    NSLog(@"%@" , parentMethodName);
+    return parentMethodName;
+}
+
+//-(void)performActionWithKey:(int)key
+-(void)performActionToLog{
 //    NSString *actionIdentifier      = [self.dictActions objectForKey:[NSString stringWithFormat:@"%d",key]];
 //    [self performAction:actionIdentifier];
     
-    PSAction * selectedActionInfo   = [PSAction getActionInfo:nil   user_id:[NSNumber numberWithInt:key]];
+    NSString *identifier            = [self getParentMethoName];
+    PSAction * selectedActionInfo   = [PSAction getActionInfo:identifier   user_id:[NSNumber numberWithInt:0]];
     kActionTypes actionType         = (kActionTypes)[selectedActionInfo.action_type integerValue];
     
     if ((actionType == kSTANDALONE && [selectedActionInfo.is_badge intValue] == 0) || actionType == kGENERTIC) {
