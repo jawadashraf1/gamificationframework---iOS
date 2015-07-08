@@ -18,10 +18,11 @@ How to make library work with Actions:
 	•	In this method, call the method [[PSPointSystemAction sharedAction] performActionToLog].
 	•	Thats All.
 
+
 Example:
--(void)EXERCISE_ACTION{
-    [[PSPointSystemAction sharedAction] performActionToLog];
-}
+	-(void)EXERCISE_ACTION {
+    		[[PSPointSystemAction sharedAction] performActionToLog];
+	}
 
 
 
