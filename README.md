@@ -21,7 +21,9 @@ How to make library work with Actions:
 
 Example:
 	-(void)EXERCISE_ACTION {
+	
     		[[PSPointSystemAction sharedAction] performActionToLog];
+    		
 	}
 
 
