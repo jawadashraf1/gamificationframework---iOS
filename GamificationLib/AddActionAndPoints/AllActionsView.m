@@ -78,7 +78,7 @@
         
         [PSAPI sendRequest:@"add_user_action" paramName:@"actions" parameters:dictParam data:nil completion:^(id object, NSString *message) {
             
-            if ([message caseInsensitiveCompare:@"Please enter valid action name."] == NSOrderedSame) {
+            if (message.length > 0 && [message caseInsensitiveCompare:@"Please enter valid action name."] == NSOrderedSame) {
                 UIAlertView *av  = [[UIAlertView alloc] initWithTitle:@"Error" message:message delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles:nil, nil];
                 [av show];
                 [self.tfAction becomeFirstResponder];
