@@ -21,7 +21,6 @@ Pod::Spec.new do |s|
 
   s.description  = <<-DESC
                    A longer description of GamificationLib in Markdown format.
-
                    * Think: Why did you write this? What is the focus? What does it do?
                    * CocoaPods will be using this to generate tags, and improve search results.
                    * Try to keep it short, snappy and to the point.
@@ -43,9 +42,7 @@ Pod::Spec.new do |s|
     Licensed under the Gamification, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
     You may obtain a copy of the License at
-
     http://teensystudios.com/gamification/admin/login
-
     Unless required by applicable law or agreed to in writing, software
     distributed under the License is distributed on an "AS IS" BASIS,
     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
@@ -121,9 +118,8 @@ Pod::Spec.new do |s|
   #
 
   # s.resource  = "icon.png"
-   s.resources = "GamificationLib/gamification_db.xcdatamodeld", "GamificationLib/PSAlertView.xib"
-
-   s.preserve_paths = "GamificationLib/gamification_db.xcdatamodeld", "GamificationLib/PSAlertView.xib"
+   s.resources = "GamificationLib/gamification_db.xcdatamodeld", "GamificationLib/PSAlertView.xib", "GamificationLib/AddActionAndPoints/AllActions.xib"
+   s.preserve_paths = "GamificationLib/gamification_db.xcdatamodeld", "GamificationLib/PSAlertView.xib", "GamificationLib/AddActionAndPoints/AllActions.xib"
 
 
   # ――― Project Linking ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #

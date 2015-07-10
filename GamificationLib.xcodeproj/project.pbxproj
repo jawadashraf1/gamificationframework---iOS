@@ -24,6 +24,7 @@
 		F125FCB91B4160A800340306 /* ActionButtons+DAO.m in Sources */ = {isa = PBXBuildFile; fileRef = F125FCB71B4160A800340306 /* ActionButtons+DAO.m */; };
 		F125FCC21B41649200340306 /* gamification_db.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F125FCC01B41649200340306 /* gamification_db.xcdatamodeld */; };
 		F13A3A0D1B427E210075CBC0 /* PSUserBadgesAndLevels.m in Sources */ = {isa = PBXBuildFile; fileRef = F13A3A0C1B427E210075CBC0 /* PSUserBadgesAndLevels.m */; };
+		F1E7020C1B4E6E2900C996E8 /* AllActionsView.m in Sources */ = {isa = PBXBuildFile; fileRef = F1E7020B1B4E6E2900C996E8 /* AllActionsView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -75,6 +76,9 @@
 		F125FCC11B41649200340306 /* gamification_db.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = gamification_db.xcdatamodel; sourceTree = "<group>"; };
 		F13A3A0B1B427E210075CBC0 /* PSUserBadgesAndLevels.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PSUserBadgesAndLevels.h; sourceTree = "<group>"; };
 		F13A3A0C1B427E210075CBC0 /* PSUserBadgesAndLevels.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSUserBadgesAndLevels.m; sourceTree = "<group>"; };
+		F151F62C1B4E6DBF0087D52A /* AllActions.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AllActions.xib; sourceTree = "<group>"; };
+		F1E7020A1B4E6E2900C996E8 /* AllActionsView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AllActionsView.h; sourceTree = "<group>"; };
+		F1E7020B1B4E6E2900C996E8 /* AllActionsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AllActionsView.m; sourceTree = "<group>"; };
 		FAF9851FA8376A4558BEB0A4 /* libPods-GamificationLib.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-GamificationLib.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FD85DAD0A625C62E3D547812 /* Pods-GamificationLib.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GamificationLib.release.xcconfig"; path = "Pods/Target Support Files/Pods-GamificationLib/Pods-GamificationLib.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -150,6 +154,7 @@
 		F125FC8A1B415C5B00340306 /* Lib */ = {
 			isa = PBXGroup;
 			children = (
+				F151F62B1B4E6D870087D52A /* AddActionAndPoints */,
 				F13A3A0B1B427E210075CBC0 /* PSUserBadgesAndLevels.h */,
 				F13A3A0C1B427E210075CBC0 /* PSUserBadgesAndLevels.m */,
 				F125FC8C1B415C6400340306 /* GHActionButton.h */,
@@ -188,6 +193,16 @@
 				F125FCB71B4160A800340306 /* ActionButtons+DAO.m */,
 			);
 			name = Dao;
+			sourceTree = "<group>";
+		};
+		F151F62B1B4E6D870087D52A /* AddActionAndPoints */ = {
+			isa = PBXGroup;
+			children = (
+				F151F62C1B4E6DBF0087D52A /* AllActions.xib */,
+				F1E7020A1B4E6E2900C996E8 /* AllActionsView.h */,
+				F1E7020B1B4E6E2900C996E8 /* AllActionsView.m */,
+			);
+			path = AddActionAndPoints;
 			sourceTree = "<group>";
 		};
 		FC1BBD9B316052FF0555182A /* Frameworks */ = {
@@ -289,6 +304,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F1E7020C1B4E6E2900C996E8 /* AllActionsView.m in Sources */,
 				F125FCAC1B415C6400340306 /* PSPointSystemAction.m in Sources */,
 				F125FCA31B415C6400340306 /* GHActionButton.m in Sources */,
 				F125FCAB1B415C6400340306 /* PSLevelInfo.m in Sources */,

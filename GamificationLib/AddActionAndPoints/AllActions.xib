@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="AllActionsView">
+            <rect key="frame" x="0.0" y="0.0" width="280" height="340"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" id="WZc-fM-reY" userLabel="All Actions">
+                    <rect key="frame" x="0.0" y="44" width="280" height="296"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No Action Lets start adding Action" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="P3F-jd-WQH">
+                            <rect key="frame" x="0.0" y="123" width="280" height="50"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" id="Miv-FT-fvJ">
+                            <rect key="frame" x="130" y="138" width="20" height="20"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        </activityIndicatorView>
+                        <tableView hidden="YES" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="FQY-Zr-APg">
+                            <rect key="frame" x="0.0" y="0.0" width="279" height="296"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <connections>
+                                <outlet property="dataSource" destination="iN0-l3-epB" id="kuU-Tr-RWO"/>
+                                <outlet property="delegate" destination="iN0-l3-epB" id="mz4-J2-f5A"/>
+                            </connections>
+                        </tableView>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                </view>
+                <view contentMode="scaleToFill" id="ZYz-e8-XAa" userLabel="Add New Action">
+                    <rect key="frame" x="-280" y="44" width="279" height="136"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <subviews>
+                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Action Name" textAlignment="center" minimumFontSize="17" id="mMp-fh-OPR">
+                            <rect key="frame" x="21" y="34" width="236" height="30"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits"/>
+                        </textField>
+                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Points" textAlignment="center" minimumFontSize="17" id="ajV-HE-DHB">
+                            <rect key="frame" x="21" y="72" width="236" height="30"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                        </textField>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                </view>
+                <navigationBar contentMode="scaleToFill" id="CTw-Hj-ydT">
+                    <rect key="frame" x="0.0" y="0.0" width="280" height="44"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                    <items>
+                        <navigationItem title="All Actions" id="7bn-0h-YXs">
+                            <barButtonItem key="leftBarButtonItem" title="    Back" id="Elp-nF-Vs7">
+                                <connections>
+                                    <action selector="btnBack_Action:" destination="iN0-l3-epB" id="03z-7y-HM0"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem key="rightBarButtonItem" title="Add    " style="plain" id="Iyx-Pc-Xr9">
+                                <connections>
+                                    <action selector="btnAddAction:" destination="iN0-l3-epB" id="vhe-wZ-N01"/>
+                                </connections>
+                            </barButtonItem>
+                        </navigationItem>
+                    </items>
+                </navigationBar>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <nil key="simulatedStatusBarMetrics"/>
+            <nil key="simulatedTopBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="activityIndicator" destination="Miv-FT-fvJ" id="hpC-RI-9g7"/>
+                <outlet property="lblNoActionFound" destination="P3F-jd-WQH" id="HcV-0E-QsU"/>
+                <outlet property="leftButton" destination="Elp-nF-Vs7" id="nNR-Kp-C81"/>
+                <outlet property="navbar" destination="CTw-Hj-ydT" id="skx-Sg-r0F"/>
+                <outlet property="rightButton" destination="Iyx-Pc-Xr9" id="B57-3A-OKb"/>
+                <outlet property="tableviewActions" destination="FQY-Zr-APg" id="931-Sl-43X"/>
+                <outlet property="tfAction" destination="mMp-fh-OPR" id="WWs-jk-HEr"/>
+                <outlet property="tfPoint" destination="ajV-HE-DHB" id="ItE-pl-Szd"/>
+                <outlet property="viewAddNewAction" destination="ZYz-e8-XAa" id="cdk-8W-KFK"/>
+                <outlet property="viewAllActions" destination="WZc-fM-reY" id="Xd7-xE-2cn"/>
+            </connections>
+            <point key="canvasLocation" x="308" y="211"/>
+        </view>
+    </objects>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>
