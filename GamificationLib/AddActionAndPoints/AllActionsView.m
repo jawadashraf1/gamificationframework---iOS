@@ -77,10 +77,18 @@
                                     };
         
         [PSAPI sendRequest:@"add_user_action" paramName:@"actions" parameters:dictParam data:nil completion:^(id object, NSString *message) {
-            self.tfPoint.text   = @"";
-            self.tfAction.text  = @"";
-            [self btnBack_Action:nil];
-            [self getAllActions];
+            
+            if ([message caseInsensitiveCompare:@"Please enter valid action name."] == NSOrderedSame) {
+                UIAlertView *av  = [[UIAlertView alloc] initWithTitle:@"Error" message:message delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles:nil, nil];
+                [av show];
+                [self.tfAction becomeFirstResponder];
+            }else{
+                self.tfPoint.text   = @"";
+                self.tfAction.text  = @"";
+
+                [self btnBack_Action:nil];
+                [self getAllActions];
+            }
         }];
     }else{
         UIAlertView *av  = [[UIAlertView alloc] initWithTitle:@"Missing" message:@"Please enter Action name and points" delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles:nil, nil];
