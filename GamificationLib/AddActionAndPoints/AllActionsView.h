@@ -10,8 +10,17 @@
 #import "PSAPI.h"
 #import "PSPointSystemAction.h"
 
+@protocol AllActionViewDelegate <NSObject>
+
+-(void)allActionView:(id)view didCancelButtonPressed:(BOOL)btnPressed;
+
+@end
+
+
 @interface AllActionsView : UIView <UITableViewDataSource, UITableViewDelegate>
 
+
+@property (nonatomic, weak) id <AllActionViewDelegate>delegate;
 
 -(id)initWithNib;
 

@@ -32,8 +32,6 @@
     CGRect viewAddNewActionRect 	= self.viewAddNewAction.frame;
     viewAddNewActionRect.origin.x   = self.frame.size.width;
     self.viewAddNewAction.frame     = viewAddNewActionRect;
-    self.leftButton.enabled         = NO;
-    self.leftButton.tintColor       = [UIColor clearColor];
     
     self.layer.cornerRadius         = 5.0;
     self.clipsToBounds              = YES;
@@ -78,7 +76,7 @@
         
         [PSAPI sendRequest:@"add_user_action" paramName:@"actions" parameters:dictParam data:nil completion:^(id object, NSString *message) {
             
-            if (message.length > 0 && [message caseInsensitiveCompare:@"Please enter valid action name."] == NSOrderedSame) {
+            if (message.length > 0) {
                 UIAlertView *av  = [[UIAlertView alloc] initWithTitle:@"Error" message:message delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles:nil, nil];
                 [av show];
                 [self.tfAction becomeFirstResponder];
@@ -97,24 +95,32 @@
 }
 
 - (IBAction)btnBack_Action:(id)sender {
-    CGRect allActionsRect    		= self.viewAllActions.frame;
-    allActionsRect.origin.x          = 0;
+    UIBarButtonItem *btn            = (UIBarButtonItem *)sender;
     
-    CGRect viewAddNewActionRect 	= self.viewAddNewAction.frame;
-    viewAddNewActionRect.origin.x   = self.frame.size.width;
-    
-    [UIView animateWithDuration:0.25 animations:^{
-        self.viewAllActions.frame     = allActionsRect;
-        self.viewAddNewAction.frame     = viewAddNewActionRect;
-    } completion:^(BOOL finished) {
-        self.navbar.topItem.title       = @"All Actions";
-        self.leftButton.enabled         = NO;
-        self.leftButton.tintColor       = [UIColor clearColor];
-        self.rightButton.title          = @"Add    ";
+    if ([btn.title caseInsensitiveCompare:@"   Cancel"] == NSOrderedSame) {
+        if (self.delegate && [self.delegate respondsToSelector:@selector(allActionView:didCancelButtonPressed:)]) {
+            [self.delegate allActionView:self didCancelButtonPressed:YES];
+        }
+    }else{
+        CGRect allActionsRect    		= self.viewAllActions.frame;
+        allActionsRect.origin.x          = 0;
         
-        [self.tfAction resignFirstResponder];
-        [self.tfPoint resignFirstResponder];
-    }];
+        CGRect viewAddNewActionRect 	= self.viewAddNewAction.frame;
+        viewAddNewActionRect.origin.x   = self.frame.size.width;
+        
+        [UIView animateWithDuration:0.25 animations:^{
+            self.viewAllActions.frame     = allActionsRect;
+            self.viewAddNewAction.frame     = viewAddNewActionRect;
+        } completion:^(BOOL finished) {
+            self.navbar.topItem.title       = @"All Actions";
+            self.leftButton.title           = @"   Cancel";
+            self.rightButton.title          = @"Add    ";
+            
+            [self.tfAction resignFirstResponder];
+            [self.tfPoint resignFirstResponder];
+        }];
+    }
+    
 }
 
 - (IBAction)btnAddAction:(id)sender {
@@ -134,8 +140,7 @@
             self.viewAddNewAction.frame     = viewAddNewActionRect;
         } completion:^(BOOL finished) {
             self.navbar.topItem.title       = @"Add New Action";
-            self.leftButton.enabled         = YES;
-            self.leftButton.tintColor       = self.rightButton.tintColor;;
+            self.leftButton.title           = @"   Back";
             self.rightButton.title          = @"Save    ";
         }];
     }else{
