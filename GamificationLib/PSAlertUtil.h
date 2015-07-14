@@ -13,7 +13,7 @@
 
 
 +(void) showAlertWithMessage:(NSString *) message;
-+(void) showCustomAlertView:(NSString *) desc title:(NSString *) title img:(NSString *) img;
++(void) showCustomAlertView:(NSString *) desc title:(NSString *) title subTitle:(NSString *) subTitle img:(NSString *) img;
 
 
 

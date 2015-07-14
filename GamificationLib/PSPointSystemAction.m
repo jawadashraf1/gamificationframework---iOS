@@ -106,7 +106,7 @@
 }
 
 -(void) showCustomViewMessage:(PSActionResponse *) response{
-    [PSAlertUtil showCustomAlertView:response.message title:response.title img:response.img];
+    [PSAlertUtil showCustomAlertView:response.message title:response.title subTitle:response.subTitle img:response.img];
 }
 
 

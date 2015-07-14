@@ -32,10 +32,15 @@
                              failure:(void (^)(AFHTTPRequestOperation *operation, NSError *error))failure{
     [self.requestSerializer setValue:@"application/x-www-form-urlencoded" forHTTPHeaderField:@"Content-Type"];
     self.responseSerializer = [AFHTTPResponseSerializer serializer];
+    
+    NSMutableDictionary *dictParam  = [[NSMutableDictionary  alloc] initWithDictionary:parameters];
+    NSString * language             = [[NSLocale preferredLanguages] objectAtIndex:0];
+    [dictParam setObject:language forKey:@"lang"];
+    
     if (data==nil) {
-        [self POST:methodName parameters:parameters success:success failure:failure];
+        [self POST:methodName parameters:dictParam success:success failure:failure];
     }else{
-        [self POST:methodName parameters:parameters constructingBodyWithBlock:^(id<AFMultipartFormData> formData) {
+        [self POST:methodName parameters:dictParam constructingBodyWithBlock:^(id<AFMultipartFormData> formData) {
             [formData appendPartWithFileData:data name:@"user_img" fileName:@"user_img.png" mimeType:@"image/png"];
         }
            success:success failure:failure];
@@ -46,10 +51,15 @@
                              failure:(void (^)(AFHTTPRequestOperation *operation, NSError *error))failure{
     [self.requestSerializer setValue:@"application/x-www-form-urlencoded" forHTTPHeaderField:@"Content-Type"];
     self.responseSerializer = [AFHTTPResponseSerializer serializer];
+    
+    NSMutableDictionary *dictParam  = [[NSMutableDictionary  alloc] initWithDictionary:parameters];
+    NSString * language             = [[NSLocale preferredLanguages] objectAtIndex:0];
+    [dictParam setObject:language forKey:@"lang"];
+    
     if (data==nil) {
-        [self POST:methodName parameters:parameters success:success failure:failure];
+        [self POST:methodName parameters:dictParam success:success failure:failure];
     }else{
-        [self POST:methodName parameters:parameters constructingBodyWithBlock:^(id<AFMultipartFormData> formData) {
+        [self POST:methodName parameters:dictParam constructingBodyWithBlock:^(id<AFMultipartFormData> formData) {
             [formData appendPartWithFileData:data name:dataKeyword fileName:[NSString stringWithFormat:@"%@.png", dataKeyword] mimeType:@"image/png"];
         }
            success:success failure:failure];
@@ -61,7 +71,12 @@
     
     [self.requestSerializer setValue:@"text/html" forHTTPHeaderField:@"Content-Type"];
     self.responseSerializer = [AFHTTPResponseSerializer serializer];
-    [self GET:methodName parameters:parameters success:success failure:failure];
+    
+    NSMutableDictionary *dictParam  = [[NSMutableDictionary  alloc] initWithDictionary:parameters];
+    NSString * language             = [[NSLocale preferredLanguages] objectAtIndex:0];
+    [dictParam setObject:language forKey:@"lang"];
+    
+    [self GET:methodName parameters:dictParam success:success failure:failure];
     
 }
 

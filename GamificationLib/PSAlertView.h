@@ -11,6 +11,7 @@
 @interface PSAlertView : UIView
 
 @property (nonatomic, weak) IBOutlet UILabel *titleLbl;
+@property (nonatomic, weak) IBOutlet UILabel *subTitleLbl;
 @property (nonatomic, weak) IBOutlet UILabel *descriptionLbl;
 @property (nonatomic, weak) IBOutlet UIImageView *imgView;
 

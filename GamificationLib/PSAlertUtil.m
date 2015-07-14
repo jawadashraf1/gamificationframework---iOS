@@ -30,10 +30,11 @@
     alertView = nil;
 }
 
-+(void) showCustomAlertView:(NSString *) desc title:(NSString *) title img:(NSString *) img{
++(void) showCustomAlertView:(NSString *) desc title:(NSString *) title subTitle:(NSString *) subTitle img:(NSString *) img{
     PSAlertView *alertView = [[[NSBundle mainBundle] loadNibNamed:@"PSAlertView" owner:self options:nil] objectAtIndex:0];
     alertView.descriptionLbl.text = desc;
     alertView.titleLbl.text = title;
+    alertView.subTitleLbl.text   = subTitle;
     [alertView.imgView sd_setImageWithURL:[NSURL URLWithString:img]];
     [[KGModal sharedInstance] showWithContentView:alertView andAnimated:YES];
 }

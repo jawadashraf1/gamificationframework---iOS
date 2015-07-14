@@ -13,6 +13,7 @@
 @property (nonatomic, strong) NSNumber<Optional> * alert;
 @property (nonatomic, strong) NSString<Optional> * message;
 @property (nonatomic, strong) NSString<Optional> * title;
+@property (nonatomic, strong) NSString<Optional> * subTitle;
 @property (nonatomic, strong) NSString<Optional> * img;
 
 @end
