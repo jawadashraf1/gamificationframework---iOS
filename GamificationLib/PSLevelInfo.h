@@ -16,6 +16,8 @@
 @property (nonatomic, strong) NSString<Optional> * level_img;
 @property (nonatomic, strong) NSNumber<Optional> * level_total_points;
 @property (nonatomic, strong) NSNumber<Optional> * level_earned_points;
+@property (nonatomic, strong) NSString<Optional> * level_title;
+@property (nonatomic, strong) NSString<Optional> * level_sub_title;
 
 +(void) getLevelsInfo:(void (^)(id object,NSString *error))completion;
 
