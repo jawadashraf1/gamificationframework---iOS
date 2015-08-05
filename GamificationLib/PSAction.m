@@ -17,6 +17,7 @@ static NSTimer *timer;
 
 
 +(void) loadAllActions{
+    [self getAllActions];
     [self pollingActions];
 }
 
