@@ -18,6 +18,7 @@
 @property (nonatomic, strong) NSString<Optional> * image;
 @property (nonatomic, strong) NSNumber<Optional> * is_badge;
 @property (nonatomic, strong) NSNumber<Optional> * points;
+@property (nonatomic, strong) NSString<Optional> * pointslbl;
 
 +(void) getUserBadgesAndLevels:(BOOL) isDeleteExisting completion:(void (^)(id object,NSString *error))completion;
 
