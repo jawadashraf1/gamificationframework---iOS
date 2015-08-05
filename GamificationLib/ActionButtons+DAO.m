@@ -44,6 +44,7 @@
 
 +(void) deleteAllActions{
     [ActionButtons MR_truncateAll];
+    [self saveData];
 }
 
 + (void)saveData {
