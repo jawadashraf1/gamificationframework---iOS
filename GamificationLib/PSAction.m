@@ -9,18 +9,39 @@
 #import "PSAction.h"
 #import "ActionButtons+DAO.h"
 
+static NSTimer *timer;
+
 
 @implementation PSAction
 
 
 
 +(void) loadAllActions{
+    [self pollingActions];
+}
+
++(void) pollingActions{
+    
+    if(timer){
+        [timer invalidate];
+        timer = nil;
+    }
+    
+    timer = [NSTimer scheduledTimerWithTimeInterval:30.0 target:self selector:@selector(getAllActions) userInfo:nil repeats:YES];
+    
+}
+
++(void) getAllActions{
+    
+    NSLog(@"Getting Actions..........");
+    
     [self getButtonActions:^(id object, NSString *error) {
         if(object){
             NSLog(@"All Actions saved locally");
         }
     }];
 }
+
 
 +(void) getButtonActions:(void (^)(id object,NSString *error))completion{
     
