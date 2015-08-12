@@ -62,11 +62,11 @@
 }
 
 //-(void)performActionWithKey:(int)key
--(void)performActionToLog{
+-(void)performActionToLog:(NSString *) identifierTemp{
 //    NSString *actionIdentifier      = [self.dictActions objectForKey:[NSString stringWithFormat:@"%d",key]];
 //    [self performAction:actionIdentifier];
     
-    NSString *identifier            = [self getParentMethoName];
+    NSString *identifier            = identifierTemp;
     PSAction * selectedActionInfo   = [PSAction getActionInfo:identifier   user_id:[NSNumber numberWithInt:0]];
     kActionTypes actionType         = (kActionTypes)[selectedActionInfo.action_type integerValue];
     
