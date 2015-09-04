@@ -8,6 +8,7 @@
 
 #import "PSAPI.h"
 #import "PSHTTPClient.h"
+#import "PSPointSystemAction.h"
 
 
 @implementation PSAPI
@@ -98,6 +99,10 @@
     NSMutableDictionary *parameters = [[NSMutableDictionary alloc] init];
     [parameters setObject:secTok forKey:PS_PARAM_TOKEN];
     [parameters setObject:userId forKey:PS_PARAM_USER_ID];
+    
+    [parameters setObject:[PSPointSystemAction sharedAction].userName   forKey:@"username"];
+    [parameters setObject:[PSPointSystemAction sharedAction].email      forKey:@"email"];
+    
     return parameters;
 }
 

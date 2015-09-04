@@ -25,9 +25,11 @@ typedef enum {
 @property (nonatomic, strong) NSString *selectedButtonAction;
 @property (nonatomic, strong) NSString *secretKey;
 @property (nonatomic, strong) NSNumber *userId;
+@property (nonatomic, strong) NSString *userName;
+@property (nonatomic, strong) NSString *email;
 
 
--(id)initWithKey:(NSString *)z_SecretKey andUserId:(NSNumber *)z_userId;
+-(id)initWithKey:(NSString *)z_SecretKey andUserId:(NSNumber *)z_userId andUserName:(NSString *)z_UserName andEmail:(NSString *)z_Email;
 +(PSPointSystemAction *) sharedAction;
 -(void)performActionToLog:(NSString *) identifierTemp;
 -(void) performAction:(NSString *) action;

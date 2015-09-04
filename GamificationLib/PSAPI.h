@@ -10,6 +10,7 @@
 #import "JSONModel.h"
 #import "PSPointsSystemConstant.h"
 
+
 @interface PSAPI : JSONModel
 
 -(id)initUsingData:(NSDictionary*) responseJsonDictionary;

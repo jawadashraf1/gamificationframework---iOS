@@ -14,13 +14,15 @@
 @implementation PSPointSystemAction
 
 
--(id)initWithKey:(NSString *)z_SecretKey andUserId:(NSNumber *)z_userId{
+-(id)initWithKey:(NSString *)z_SecretKey andUserId:(NSNumber *)z_userId andUserName:(NSString *)z_UserName andEmail:(NSString *)z_Email{
     self = [super init];
     if (self) {
         //Setting up Magical Record to Data Saving
         [MagicalRecord setupCoreDataStack];
         self.secretKey              = z_SecretKey;
         self.userId                 = z_userId;
+        self.userName               = z_UserName;
+        self.email                  = z_Email;
         [self saveSecretKeyAndUserId];
         [PSAction loadAllActions];
     }
