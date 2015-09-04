@@ -404,7 +404,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 17A13EB0AB323533AE5F7BAF /* Pods-GamificationLib.debug.xcconfig */;
 			buildSettings = {
-				OTHER_LDFLAGS = "-ObjC";
+				OTHER_LDFLAGS = "$(inherited)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 			};
@@ -414,7 +414,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = FD85DAD0A625C62E3D547812 /* Pods-GamificationLib.release.xcconfig */;
 			buildSettings = {
-				OTHER_LDFLAGS = "-ObjC";
+				OTHER_LDFLAGS = "$(inherited)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 			};
