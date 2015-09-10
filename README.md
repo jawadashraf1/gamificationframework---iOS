@@ -8,7 +8,8 @@ Integrating Gamification Library
 	•	Include the #import <GamificationLib/GamificationLib.h> in GetHot-Prefix.pch
 	•	Initialize PSPointSystemAction class with Secret Key and User Id.
 	
-	 [[PSPointSystemAction sharedAction] initWithKey:@"GAMIFICATION_KEY" andUserId:@"USER_ID"];
+	[[PSPointSystemAction sharedAction] initWithKey:@"GAMIFICATION_KEY" andUserId:@"USER_ID" andUserName:@"USER_Name" andEmail:@"USER_Email"];
+	
  
 How to make library work with Actions:
 

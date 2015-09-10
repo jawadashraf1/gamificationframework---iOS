@@ -102,8 +102,20 @@
     
     [parameters setObject:[PSPointSystemAction sharedAction].userName   forKey:@"username"];
     [parameters setObject:[PSPointSystemAction sharedAction].email      forKey:@"email"];
+    [parameters setObject:[self getFormattedDate]                       forKey:@"created_date"];
     
     return parameters;
 }
+
+
+
++(NSString *)getFormattedDate{
+    NSDateFormatter *dateFormat = [[NSDateFormatter alloc] init];
+    [dateFormat setDateFormat:@"yyyy-M-dd HH:mm:ss"];
+    [dateFormat setTimeZone:[NSTimeZone systemTimeZone]];
+    
+    return [dateFormat stringFromDate:[NSDate date]];
+}
+
 
 @end
