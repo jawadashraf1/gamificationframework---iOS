@@ -121,7 +121,7 @@ static NSTimer *timer;
     NSString *secTok    = [[NSUserDefaults standardUserDefaults] objectForKey:@"secretKey"];
     NSDictionary *dictParam  = @{PP_PARAM_TOKEN: secTok};
     
-    [self sendRequest:PS_API_GET_ALL_LEADERBOARDS paramName:@"data" parameters:dictParam data:nil completion:^(id object, NSString *error) {
+    [self sendRequest:PS_API_GET_ALL_LEADERBOARDS parameters:dictParam completion:^(id object, NSString *message) {
         if(object){
             NSDictionary *response = (NSDictionary *)object;
             if ([[response allKeys] containsObject:@"success"]) {
@@ -168,7 +168,7 @@ static NSTimer *timer;
     NSString *secTok            = [[NSUserDefaults standardUserDefaults] objectForKey:@"secretKey"];
     NSDictionary *dictParam     = @{PP_PARAM_TOKEN: secTok, @"leaderboard_id":leaderboardId};
     
-    [self sendRequest:PS_API_GET_LEADERBOARD_USERS paramName:@"data" parameters:dictParam data:nil completion:^(id object, NSString *error) {
+    [self sendRequest:PS_API_GET_LEADERBOARD_USERS parameters:dictParam completion:^(id object, NSString *message){
         if(object){
             NSDictionary *response = (NSDictionary *)object;
             if ([[response allKeys] containsObject:@"success"]) {

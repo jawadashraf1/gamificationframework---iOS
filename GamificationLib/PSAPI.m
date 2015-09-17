@@ -90,6 +90,20 @@
     
 }
 
+
++(void)sendRequest:(NSString *)apiName parameters:(NSDictionary *)parameters completion:(void (^)(id object, NSString *message))completion {
+    
+    [[PSHTTPClient sharedClient] postRequestDataWithMethodName:apiName withParameters:parameters withImageData:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
+        
+        NSDictionary *responseDict= [NSJSONSerialization JSONObjectWithData:responseObject options:NSJSONReadingMutableContainers error:nil];
+        completion (responseDict,nil);
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        completion (nil,error.localizedDescription);
+    }];
+    
+}
+
+
 +(NSMutableDictionary *) getDefaultParams{
     
     NSString *secTok    = [[NSUserDefaults standardUserDefaults] objectForKey:@"secretKey"];
