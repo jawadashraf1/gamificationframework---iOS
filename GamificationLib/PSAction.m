@@ -114,4 +114,99 @@ static NSTimer *timer;
     [ActionButtons deleteAllActions];
 }
 
+
+
++(void)getLeaderboardsWithCompletionHandler:(void (^)(NSString *err, NSArray *arr))handler {
+    
+    NSString *secTok    = [[NSUserDefaults standardUserDefaults] objectForKey:@"secretKey"];
+    NSDictionary *dictParam  = @{PP_PARAM_TOKEN: secTok};
+    
+    [self sendRequest:PS_API_GET_ALL_LEADERBOARDS paramName:@"data" parameters:dictParam data:nil completion:^(id object, NSString *error) {
+        if(object){
+            NSDictionary *response = (NSDictionary *)object;
+            if ([[response allKeys] containsObject:@"success"]) {
+                
+                if ([[response objectForKey:@"success"] boolValue]) {
+                    if ([[response allKeys] containsObject:@"data"]) {
+                        NSDictionary *dictData = (NSDictionary *)[response objectForKey:@"data"];
+                        if ([[dictData allKeys] containsObject:@"leaderboard"]) {
+                            NSArray *arrayLeaderboards  = [dictData objectForKey:@"leaderboard"];
+                            if (arrayLeaderboards.count > 0) {
+                                handler(nil,arrayLeaderboards);
+                            }else{
+                                NSString *error = @"No Data";
+                                handler(error,arrayLeaderboards);
+                            }
+                        }else{
+                            NSString *error = @"No Data";
+                            handler(error,nil);
+                        }
+                    }else{
+                        NSString *error = @"No Data";
+                        handler(error,nil);
+                    }
+                    
+                    
+                    
+                }else{
+                    NSString *error = @"Please try again later";
+                    handler(error,nil);
+                }
+            }else{
+                NSString *error = @"Invalid Response";
+                handler(error,nil);
+            }
+        } else {
+            handler(nil,nil);
+        }
+    }];
+}
+
+
++(void)getUsersForLeaderboard:(NSString *)leaderboardId WithCompletionHandler:(void (^)(NSString *err, NSArray *arr))handler {
+    
+    NSString *secTok            = [[NSUserDefaults standardUserDefaults] objectForKey:@"secretKey"];
+    NSDictionary *dictParam     = @{PP_PARAM_TOKEN: secTok, @"leaderboard_id":leaderboardId};
+    
+    [self sendRequest:PS_API_GET_LEADERBOARD_USERS paramName:@"data" parameters:dictParam data:nil completion:^(id object, NSString *error) {
+        if(object){
+            NSDictionary *response = (NSDictionary *)object;
+            if ([[response allKeys] containsObject:@"success"]) {
+                
+                if ([[response objectForKey:@"success"] boolValue]) {
+                    if ([[response allKeys] containsObject:@"data"]) {
+                        NSDictionary *dictData = (NSDictionary *)[response objectForKey:@"data"];
+                        if ([[dictData allKeys] containsObject:@"leaderboard_user_actions"]) {
+                            NSArray *arrayLeaderboards  = [dictData objectForKey:@"leaderboard_user_actions"];
+                            if (arrayLeaderboards.count > 0) {
+                                handler(nil,arrayLeaderboards);
+                            }else{
+                                NSString *error = @"No Data";
+                                handler(error,arrayLeaderboards);
+                            }
+                        }else{
+                            NSString *error = @"No Data";
+                            handler(error,nil);
+                        }
+                    }else{
+                        NSString *error = @"No Data";
+                        handler(error,nil);
+                    }
+                    
+                    
+                    
+                }else{
+                    NSString *error = @"Please try again later";
+                    handler(error,nil);
+                }
+            }else{
+                NSString *error = @"Invalid Response";
+                handler(error,nil);
+            }
+        } else {
+            handler(nil,nil);
+        }
+    }];
+}
+
 @end

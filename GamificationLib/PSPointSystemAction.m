@@ -112,4 +112,29 @@
 }
 
 
+
+
+
+-(void)getAllLeaderBoardsWithCompletionHandler:(void (^)(NSString *error, NSArray *arrayLeaderboards))handler {
+    [PSAction getLeaderboardsWithCompletionHandler:^(NSString *err, NSArray *arr) {
+        if (err.length > 0) {
+            [PSAlertUtil showCustomAlertView:err title:@"Error" subTitle:nil img:nil];
+        }
+        handler (err, arr);
+    }];
+}
+
+
+-(void)getLeaderBoardsDetailsForId:(NSString *)leaderboardId WithCompletionHandler:(void (^)(NSString *error, NSArray *arrayLeaderboards))handler {
+    [PSAction getUsersForLeaderboard:leaderboardId WithCompletionHandler:^(NSString *err, NSArray *arr) {
+        if (err.length > 0) {
+            [PSAlertUtil showCustomAlertView:err title:@"Error" subTitle:nil img:nil];
+        }
+        handler (err, arr);
+    }];
+}
+
+
+
+
 @end
