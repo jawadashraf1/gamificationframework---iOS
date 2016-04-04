@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "GamificationLib"
-  s.version      = "0.0.24"
+  s.version      = "0.0.25"
   s.summary      = "This library can only be used for gamification."
 
   s.description  = <<-DESC
@@ -27,7 +27,7 @@ Pod::Spec.new do |s|
                    * Finally, don't worry about the indent, CocoaPods strips it!
                    DESC
 
-  s.homepage     = "http://teensystudios.com/gamification/admin/login"
+  s.homepage     = "http://gamificationlabs.teensystudios.com/gamification/admin/login"
   # s.screenshots  = "www.example.com/screenshots_1.gif", "www.example.com/screenshots_2.gif"
 
 
@@ -42,7 +42,7 @@ Pod::Spec.new do |s|
     Licensed under the Gamification, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
     You may obtain a copy of the License at
-    http://teensystudios.com/gamification/admin/login
+    http://gamificationlabs.teensystudios.com/gamification/admin/login
     Unless required by applicable law or agreed to in writing, software
     distributed under the License is distributed on an "AS IS" BASIS,
     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
@@ -89,7 +89,7 @@ Pod::Spec.new do |s|
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  s.source       = { :git => "https://github.com/jawadashraf1/gamificationframework---iOS.git", :tag => "0.0.24" }
+  s.source       = { :git => "https://github.com/jawadashraf1/gamificationframework---iOS.git", :tag => "0.0.25" }
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
