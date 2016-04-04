@@ -21,7 +21,7 @@
     static PSHTTPClient *_sharedClient = nil;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        NSString *pointsSystemUrl = @"http://teensystudios.com/gamification/web/"; // [self getStringFromPlistWithKey:POINT_SYSTEM_URL];
+        NSString *pointsSystemUrl = @"http://gamificationlabs.teensystudios.com/gamification/web/"; // [self getStringFromPlistWithKey:POINT_SYSTEM_URL];
         NSLog(@"POINTS SYSTEM URL %@",pointsSystemUrl);
         _sharedClient = [[PSHTTPClient alloc] initWithBaseURL:[NSURL URLWithString:pointsSystemUrl]];
     });
