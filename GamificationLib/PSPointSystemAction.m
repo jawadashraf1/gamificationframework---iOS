@@ -9,7 +9,7 @@
 #import "PSPointSystemAction.h"
 #import "PSAlertUtil.h"
 #import "PSAction.h"
-#import "MagicalRecord.h"
+#import <MagicalRecord/MagicalRecord.h>
 
 @implementation PSPointSystemAction
 

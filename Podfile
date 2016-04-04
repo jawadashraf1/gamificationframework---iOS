@@ -3,7 +3,7 @@
 
 target 'GamificationLib' do
 
-pod 'AFNetworking'
+pod 'AFNetworking', '~> 2.0' 
 pod 'MagicalRecord'
 pod 'JSONModel'
 pod 'SDWebImage'

@@ -8,7 +8,7 @@
 
 #import "ActionButtons+DAO.h"
 
-#import "MagicalRecord.h"
+#import <MagicalRecord/MagicalRecord.h>
 
 #define MR_SHORTHAND 1
 

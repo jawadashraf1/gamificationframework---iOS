@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1D85583F29BE59E569C9D641 /* libPods-GamificationLib.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FAF9851FA8376A4558BEB0A4 /* libPods-GamificationLib.a */; };
+		9DADDF12282CDAA3134A453D /* libPods-GamificationLib.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A299F0488DEBDC310486AC3E /* libPods-GamificationLib.a */; };
 		F125FC741B415AD700340306 /* GamificationLib.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = F125FC731B415AD700340306 /* GamificationLib.h */; };
 		F125FC761B415AD700340306 /* GamificationLib.m in Sources */ = {isa = PBXBuildFile; fileRef = F125FC751B415AD700340306 /* GamificationLib.m */; };
 		F125FCA31B415C6400340306 /* GHActionButton.m in Sources */ = {isa = PBXBuildFile; fileRef = F125FC8D1B415C6400340306 /* GHActionButton.m */; };
@@ -41,14 +41,15 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		17A13EB0AB323533AE5F7BAF /* Pods-GamificationLib.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GamificationLib.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GamificationLib/Pods-GamificationLib.debug.xcconfig"; sourceTree = "<group>"; };
+		A299F0488DEBDC310486AC3E /* libPods-GamificationLib.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-GamificationLib.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		BBA527BB4F5D49E6D711C702 /* Pods-GamificationLib.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GamificationLib.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GamificationLib/Pods-GamificationLib.debug.xcconfig"; sourceTree = "<group>"; };
+		EE489BA01E80E61FEC7EE600 /* Pods-GamificationLib.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GamificationLib.release.xcconfig"; path = "Pods/Target Support Files/Pods-GamificationLib/Pods-GamificationLib.release.xcconfig"; sourceTree = "<group>"; };
 		F125FC701B415AD700340306 /* libGamificationLib.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libGamificationLib.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		F125FC731B415AD700340306 /* GamificationLib.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GamificationLib.h; sourceTree = "<group>"; };
 		F125FC751B415AD700340306 /* GamificationLib.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GamificationLib.m; sourceTree = "<group>"; };
 		F125FC811B415AD700340306 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F125FC8C1B415C6400340306 /* GHActionButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GHActionButton.h; sourceTree = "<group>"; };
 		F125FC8D1B415C6400340306 /* GHActionButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GHActionButton.m; sourceTree = "<group>"; };
-		F125FC8E1B415C6400340306 /* PointsSystem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PointsSystem.h; sourceTree = "<group>"; };
 		F125FC8F1B415C6400340306 /* PSAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PSAction.h; sourceTree = "<group>"; };
 		F125FC901B415C6400340306 /* PSAction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSAction.m; sourceTree = "<group>"; };
 		F125FC911B415C6400340306 /* PSActionResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PSActionResponse.h; sourceTree = "<group>"; };
@@ -79,8 +80,6 @@
 		F151F62C1B4E6DBF0087D52A /* AllActions.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AllActions.xib; sourceTree = "<group>"; };
 		F1E7020A1B4E6E2900C996E8 /* AllActionsView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AllActionsView.h; sourceTree = "<group>"; };
 		F1E7020B1B4E6E2900C996E8 /* AllActionsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AllActionsView.m; sourceTree = "<group>"; };
-		FAF9851FA8376A4558BEB0A4 /* libPods-GamificationLib.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-GamificationLib.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		FD85DAD0A625C62E3D547812 /* Pods-GamificationLib.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GamificationLib.release.xcconfig"; path = "Pods/Target Support Files/Pods-GamificationLib/Pods-GamificationLib.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,20 +87,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1D85583F29BE59E569C9D641 /* libPods-GamificationLib.a in Frameworks */,
+				9DADDF12282CDAA3134A453D /* libPods-GamificationLib.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		DF4E163EA138E185A22A30E7 /* Pods */ = {
+		4586561983E2218E7A5995FE /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				17A13EB0AB323533AE5F7BAF /* Pods-GamificationLib.debug.xcconfig */,
-				FD85DAD0A625C62E3D547812 /* Pods-GamificationLib.release.xcconfig */,
+				BBA527BB4F5D49E6D711C702 /* Pods-GamificationLib.debug.xcconfig */,
+				EE489BA01E80E61FEC7EE600 /* Pods-GamificationLib.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		64BC9E2ACC2633D9D05C113C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A299F0488DEBDC310486AC3E /* libPods-GamificationLib.a */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		F125FC671B415AD700340306 = {
@@ -110,8 +117,8 @@
 				F125FC721B415AD700340306 /* GamificationLib */,
 				F125FC7F1B415AD700340306 /* GamificationLibTests */,
 				F125FC711B415AD700340306 /* Products */,
-				DF4E163EA138E185A22A30E7 /* Pods */,
-				FC1BBD9B316052FF0555182A /* Frameworks */,
+				4586561983E2218E7A5995FE /* Pods */,
+				64BC9E2ACC2633D9D05C113C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -159,7 +166,6 @@
 				F13A3A0C1B427E210075CBC0 /* PSUserBadgesAndLevels.m */,
 				F125FC8C1B415C6400340306 /* GHActionButton.h */,
 				F125FC8D1B415C6400340306 /* GHActionButton.m */,
-				F125FC8E1B415C6400340306 /* PointsSystem.h */,
 				F125FC8F1B415C6400340306 /* PSAction.h */,
 				F125FC901B415C6400340306 /* PSAction.m */,
 				F125FC911B415C6400340306 /* PSActionResponse.h */,
@@ -205,14 +211,6 @@
 			path = AddActionAndPoints;
 			sourceTree = "<group>";
 		};
-		FC1BBD9B316052FF0555182A /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				FAF9851FA8376A4558BEB0A4 /* libPods-GamificationLib.a */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -220,11 +218,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F125FC841B415AD700340306 /* Build configuration list for PBXNativeTarget "GamificationLib" */;
 			buildPhases = (
-				33B7E93A8F4A612AD4CCD044 /* Check Pods Manifest.lock */,
+				14D26BB5F53235992571F155 /* 📦 Check Pods Manifest.lock */,
 				F125FC6C1B415AD700340306 /* Sources */,
 				F125FC6D1B415AD700340306 /* Frameworks */,
 				F125FC6E1B415AD700340306 /* CopyFiles */,
-				341442E9E16007A175CECB94 /* Copy Pods Resources */,
+				862AC785AD48B15359DEA5D6 /* 📦 Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -241,7 +239,7 @@
 		F125FC681B415AD700340306 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0610;
+				LastUpgradeCheck = 0730;
 				ORGANIZATIONNAME = EurekaTechStudio;
 				TargetAttributes = {
 					F125FC6F1B415AD700340306 = {
@@ -267,14 +265,14 @@
 /* End PBXProject section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		33B7E93A8F4A612AD4CCD044 /* Check Pods Manifest.lock */ = {
+		14D26BB5F53235992571F155 /* 📦 Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Check Pods Manifest.lock";
+			name = "📦 Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -282,14 +280,14 @@
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-		341442E9E16007A175CECB94 /* Copy Pods Resources */ = {
+		862AC785AD48B15359DEA5D6 /* 📦 Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Copy Pods Resources";
+			name = "📦 Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -345,6 +343,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -402,8 +401,10 @@
 		};
 		F125FC851B415AD700340306 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 17A13EB0AB323533AE5F7BAF /* Pods-GamificationLib.debug.xcconfig */;
+			baseConfigurationReference = BBA527BB4F5D49E6D711C702 /* Pods-GamificationLib.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
 				OTHER_LDFLAGS = "$(inherited)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -412,8 +413,10 @@
 		};
 		F125FC861B415AD700340306 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = FD85DAD0A625C62E3D547812 /* Pods-GamificationLib.release.xcconfig */;
+			baseConfigurationReference = EE489BA01E80E61FEC7EE600 /* Pods-GamificationLib.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
 				OTHER_LDFLAGS = "$(inherited)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;

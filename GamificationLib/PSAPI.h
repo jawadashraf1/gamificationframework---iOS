@@ -7,7 +7,7 @@
 //
 
 
-#import "JSONModel.h"
+#import <JSONModel/JSONAPI.h>
 #import "PSPointsSystemConstant.h"
 
 
