@@ -9,7 +9,7 @@
 #import "PSPointSystemAction.h"
 #import "PSAlertUtil.h"
 #import "PSAction.h"
-#import <MagicalRecord/MagicalRecord.h>
+//#import <MagicalRecord/MagicalRecord.h>
 
 @implementation PSPointSystemAction
 
@@ -18,7 +18,7 @@
     self = [super init];
     if (self) {
         //Setting up Magical Record to Data Saving
-        [MagicalRecord setupCoreDataStack];
+//        [MagicalRecord setupCoreDataStack];
         self.secretKey              = z_SecretKey;
         self.userId                 = z_userId;
         self.userName               = z_UserName;
@@ -32,7 +32,7 @@
 
 -(void) setKeyInfo:(NSString *)z_SecretKey andUserId:(NSNumber *)z_userId andUserName:(NSString *)z_UserName andEmail:(NSString *)z_Email{
         //Setting up Magical Record to Data Saving
-        [MagicalRecord setupCoreDataStack];
+//        [MagicalRecord setupCoreDataStack];
         self.secretKey              = z_SecretKey;
         self.userId                 = z_userId;
         self.userName               = z_UserName;

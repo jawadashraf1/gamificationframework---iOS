@@ -261,11 +261,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F125FC841B415AD700340306 /* Build configuration list for PBXNativeTarget "GamificationLib" */;
 			buildPhases = (
-				14D26BB5F53235992571F155 /* 📦 Check Pods Manifest.lock */,
+				14D26BB5F53235992571F155 /* [CP] Check Pods Manifest.lock */,
 				F125FC6C1B415AD700340306 /* Sources */,
 				F125FC6D1B415AD700340306 /* Frameworks */,
 				F125FC6E1B415AD700340306 /* Copy Files */,
-				862AC785AD48B15359DEA5D6 /* 📦 Copy Pods Resources */,
+				862AC785AD48B15359DEA5D6 /* [CP] Copy Pods Resources */,
 				613B34C71D1BAE060097179E /* Headers */,
 			);
 			buildRules = (
@@ -309,14 +309,14 @@
 /* End PBXProject section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		14D26BB5F53235992571F155 /* 📦 Check Pods Manifest.lock */ = {
+		14D26BB5F53235992571F155 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "📦 Check Pods Manifest.lock";
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -324,14 +324,14 @@
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-		862AC785AD48B15359DEA5D6 /* 📦 Copy Pods Resources */ = {
+		862AC785AD48B15359DEA5D6 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "📦 Copy Pods Resources";
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;

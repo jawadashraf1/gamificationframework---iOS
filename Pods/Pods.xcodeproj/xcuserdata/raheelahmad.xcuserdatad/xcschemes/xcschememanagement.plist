@@ -19,7 +19,12 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>MagicalRecord.xcscheme</key>
+		<key>ObjectiveRecord.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>ObjectiveSugar.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -37,12 +42,17 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>00547DEC04672BE2D47CE62803D5A1BB</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>09FA060F1A0492FB25232F489AC4E573</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>3E25514825F9680061A85B105C4ECFCA</key>
+		<key>18E4787DD0E2EE7856F5F24821D6E6A6</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -57,12 +67,12 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>C2B15F148A90930829E333A55375B83E</key>
+		<key>ADA9EEA9747E6203C07D2332E7E70008</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>D54AB3ECEB9A8FBA15D4F73CBE326692</key>
+		<key>C44DF30F61E0D691D121962AC68466DC</key>
 		<dict>
 			<key>primary</key>
 			<true/>
