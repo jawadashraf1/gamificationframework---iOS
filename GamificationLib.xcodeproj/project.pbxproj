@@ -38,7 +38,7 @@
 		F125FCAC1B415C6400340306 /* PSPointSystemAction.m in Sources */ = {isa = PBXBuildFile; fileRef = F125FCA21B415C6400340306 /* PSPointSystemAction.m */; };
 		F125FCB81B4160A800340306 /* ActionButtons.m in Sources */ = {isa = PBXBuildFile; fileRef = F125FCB51B4160A800340306 /* ActionButtons.m */; };
 		F125FCB91B4160A800340306 /* ActionButtons+DAO.m in Sources */ = {isa = PBXBuildFile; fileRef = F125FCB71B4160A800340306 /* ActionButtons+DAO.m */; };
-		F125FCC21B41649200340306 /* gamification_db.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F125FCC01B41649200340306 /* gamification_db.xcdatamodeld */; };
+		F125FCC21B41649200340306 /* GamificationLib.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F125FCC01B41649200340306 /* GamificationLib.xcdatamodeld */; };
 		F13A3A0D1B427E210075CBC0 /* PSUserBadgesAndLevels.m in Sources */ = {isa = PBXBuildFile; fileRef = F13A3A0C1B427E210075CBC0 /* PSUserBadgesAndLevels.m */; };
 		F1E7020C1B4E6E2900C996E8 /* AllActionsView.m in Sources */ = {isa = PBXBuildFile; fileRef = F1E7020B1B4E6E2900C996E8 /* AllActionsView.m */; };
 /* End PBXBuildFile section */
@@ -91,7 +91,7 @@
 		F125FCB51B4160A800340306 /* ActionButtons.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActionButtons.m; sourceTree = "<group>"; };
 		F125FCB61B4160A800340306 /* ActionButtons+DAO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ActionButtons+DAO.h"; sourceTree = "<group>"; };
 		F125FCB71B4160A800340306 /* ActionButtons+DAO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ActionButtons+DAO.m"; sourceTree = "<group>"; };
-		F125FCC11B41649200340306 /* gamification_db.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = gamification_db.xcdatamodel; sourceTree = "<group>"; };
+		F125FCC11B41649200340306 /* GamificationLib.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = GamificationLib.xcdatamodel; sourceTree = "<group>"; };
 		F13A3A0B1B427E210075CBC0 /* PSUserBadgesAndLevels.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PSUserBadgesAndLevels.h; sourceTree = "<group>"; };
 		F13A3A0C1B427E210075CBC0 /* PSUserBadgesAndLevels.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSUserBadgesAndLevels.m; sourceTree = "<group>"; };
 		F151F62C1B4E6DBF0087D52A /* AllActions.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AllActions.xib; sourceTree = "<group>"; };
@@ -154,7 +154,7 @@
 				F125FC8A1B415C5B00340306 /* Lib */,
 				F125FC731B415AD700340306 /* GamificationLib.h */,
 				F125FC751B415AD700340306 /* GamificationLib.m */,
-				F125FCC01B41649200340306 /* gamification_db.xcdatamodeld */,
+				F125FCC01B41649200340306 /* GamificationLib.xcdatamodeld */,
 			);
 			path = GamificationLib;
 			sourceTree = "<group>";
@@ -358,7 +358,7 @@
 				F125FCAA1B415C6400340306 /* PSHTTPClient.m in Sources */,
 				F125FCA71B415C6400340306 /* PSAlertView.m in Sources */,
 				F125FCB91B4160A800340306 /* ActionButtons+DAO.m in Sources */,
-				F125FCC21B41649200340306 /* gamification_db.xcdatamodeld in Sources */,
+				F125FCC21B41649200340306 /* GamificationLib.xcdatamodeld in Sources */,
 				F125FCB81B4160A800340306 /* ActionButtons.m in Sources */,
 				F125FCA41B415C6400340306 /* PSAction.m in Sources */,
 				F125FCA81B415C6400340306 /* PSAPI.m in Sources */,
@@ -491,13 +491,13 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		F125FCC01B41649200340306 /* gamification_db.xcdatamodeld */ = {
+		F125FCC01B41649200340306 /* GamificationLib.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				F125FCC11B41649200340306 /* gamification_db.xcdatamodel */,
+				F125FCC11B41649200340306 /* GamificationLib.xcdatamodel */,
 			);
-			currentVersion = F125FCC11B41649200340306 /* gamification_db.xcdatamodel */;
-			path = gamification_db.xcdatamodeld;
+			currentVersion = F125FCC11B41649200340306 /* GamificationLib.xcdatamodel */;
+			path = GamificationLib.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};
