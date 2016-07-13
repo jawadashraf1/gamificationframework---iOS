@@ -29,6 +29,19 @@
     return self;
 }
 
+
+-(void) setKeyInfo:(NSString *)z_SecretKey andUserId:(NSNumber *)z_userId andUserName:(NSString *)z_UserName andEmail:(NSString *)z_Email{
+        //Setting up Magical Record to Data Saving
+        [MagicalRecord setupCoreDataStack];
+        self.secretKey              = z_SecretKey;
+        self.userId                 = z_userId;
+        self.userName               = z_UserName;
+        self.email                  = z_Email;
+        [self saveSecretKeyAndUserId];
+        [PSAction loadAllActions];
+    
+}
+
 //** Read Plist file from Main Bundle to get Array of its contents
 - (NSDictionary *)getDictionaryFromPlistFileWithName:(NSString *)fileName {
     
