@@ -172,7 +172,7 @@
     NSURL *modelURL = [[NSBundle mainBundle] URLForResource:@"GamificationLib_db" withExtension:@"momd"];
     
     if(modelURL == nil){
-        modelURL = [[NSBundle mainBundle] URLForResource:@"/Frameworks/GamificationLib.framework/GamificationLib_db" withExtension:@"momd"];
+        modelURL = [[NSBundle mainBundle] URLForResource:@"/Frameworks/GamificationLib.framework/GamificationLib" withExtension:@"momd"];
         
     }
     
