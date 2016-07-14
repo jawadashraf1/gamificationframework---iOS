@@ -19,27 +19,27 @@
 
 
 +(void) saveAction:(PSAction *) action{
-//    ActionButtons *actionb  = [ActionButtons MR_createEntity];
-//    actionb.button_id       = action.button_id;
-//    actionb.identifier      = action.identifier;
-//    actionb.points          = action.points;
-//    actionb.action_type     = action.action_type;
-//    actionb.is_badge        = action.is_badge;
-//    actionb.user_id         = action.user_id;
-//    actionb.button_tag      = action.button_tag;
-//    [self saveData];
+    //    ActionButtons *actionb  = [ActionButtons MR_createEntity];
+    //    actionb.button_id       = action.button_id;
+    //    actionb.identifier      = action.identifier;
+    //    actionb.points          = action.points;
+    //    actionb.action_type     = action.action_type;
+    //    actionb.is_badge        = action.is_badge;
+    //    actionb.user_id         = action.user_id;
+    //    actionb.button_tag      = action.button_tag;
+    //    [self saveData];
     
     
-//    ActionButtons *actionb  = [ActionButtons create];
-//    actionb.button_id       = action.button_id;
-//    actionb.identifier      = action.identifier;
-//    actionb.points          = action.points;
-//    actionb.action_type     = action.action_type;
-//    actionb.is_badge        = action.is_badge;
-//    actionb.user_id         = action.user_id;
-//    actionb.button_tag      = action.button_tag;
-//    
-//    [actionb save];
+    //    ActionButtons *actionb  = [ActionButtons create];
+    //    actionb.button_id       = action.button_id;
+    //    actionb.identifier      = action.identifier;
+    //    actionb.points          = action.points;
+    //    actionb.action_type     = action.action_type;
+    //    actionb.is_badge        = action.is_badge;
+    //    actionb.user_id         = action.user_id;
+    //    actionb.button_tag      = action.button_tag;
+    //
+    //    [actionb save];
     
     
     
@@ -54,7 +54,7 @@
     actionb.is_badge        = action.is_badge;
     actionb.user_id         = action.user_id;
     actionb.button_tag      = action.button_tag;
-
+    
     NSError *error = nil;
     
     [[PSPointSystemAction sharedAction].managedObjectContext save:&error];
@@ -69,37 +69,37 @@
 }
 
 +(ActionButtons *) getActionInfo:(NSString *) identifier user_id:(NSNumber *) user_id{
-//    NSPredicate * predicate = [NSPredicate predicateWithFormat:@"(identifier = %@) AND (user_id = %@)",identifier,user_id];
-//    NSPredicate * predicate = [NSPredicate predicateWithFormat:@"button_tag = %@",user_id];
-
-//    
-//   
-//    
-//    
-//    NSArray * list          = [ActionButtons MR_findAllWithPredicate:predicate];
-//    
-//    ActionButtons * actionButtons = nil;
-//    
-//    if ([list count] > 0 ) {
-//        actionButtons       = (ActionButtons *)[list objectAtIndex:0];
-//    }
+    //    NSPredicate * predicate = [NSPredicate predicateWithFormat:@"(identifier = %@) AND (user_id = %@)",identifier,user_id];
+    //    NSPredicate * predicate = [NSPredicate predicateWithFormat:@"button_tag = %@",user_id];
+    
+    //
+    //
+    //
+    //
+    //    NSArray * list          = [ActionButtons MR_findAllWithPredicate:predicate];
+    //
+    //    ActionButtons * actionButtons = nil;
+    //
+    //    if ([list count] > 0 ) {
+    //        actionButtons       = (ActionButtons *)[list objectAtIndex:0];
+    //    }
     
     
-    //NSPredicate * predicate = [NSPredicate predicateWithFormat:@"identifier ==[c] %@",identifier];
+    NSPredicate * predicate = [NSPredicate predicateWithFormat:@"identifier ==[c] %@",identifier];
     
-    ActionButtons * actionButtons = (ActionButtons *) [self getObject:@"ActionButtons" predicate:[NSString stringWithFormat:@"identifier ==[c] %@",identifier]];
+    ActionButtons * actionButtons = (ActionButtons *) [self getObject:@"ActionButtons" predicate:predicate];
     
     
-//    NSArray *list = [ActionButtons where:predicate];
-//    
-//    
-//    //NSArray * list          = [ActionButtons MR_findAllWithPredicate:predicate];
-//    
-//    ActionButtons * actionButtons = nil;
-//    
-//    if ([list count] > 0 ) {
-//        actionButtons       = (ActionButtons *)[list objectAtIndex:0];
-//    }
+    //    NSArray *list = [ActionButtons where:predicate];
+    //
+    //
+    //    //NSArray * list          = [ActionButtons MR_findAllWithPredicate:predicate];
+    //
+    //    ActionButtons * actionButtons = nil;
+    //
+    //    if ([list count] > 0 ) {
+    //        actionButtons       = (ActionButtons *)[list objectAtIndex:0];
+    //    }
     
     
     return actionButtons;
@@ -114,22 +114,22 @@
     [[PSPointSystemAction sharedAction].managedObjectContext.persistentStoreCoordinator executeRequest:delete withContext:[PSPointSystemAction sharedAction].managedObjectContext error:&deleteError];
     
     
-//    [ActionButtons deleteAllInContext:[PSPointSystemAction sharedAction].managedObjectContext];
-//    
-//    [PSPointSystemAction sharedAction].managedObjectContext dele
+    //    [ActionButtons deleteAllInContext:[PSPointSystemAction sharedAction].managedObjectContext];
+    //
+    //    [PSPointSystemAction sharedAction].managedObjectContext dele
     //[ActionButtons save];
     //[ActionButtons MR_truncateAll];
     //[self saveData];
 }
 
 + (void)saveData {
-//    [[NSManagedObjectContext MR_defaultContext] MR_saveToPersistentStoreWithCompletion:^(BOOL success, NSError *error) {
-//        if (error) {
-//            NSLog(@"error in saving %@", error);
-//        }else{
-//            NSLog(@"Data saved successfully");
-//        }
-//    }];
+    //    [[NSManagedObjectContext MR_defaultContext] MR_saveToPersistentStoreWithCompletion:^(BOOL success, NSError *error) {
+    //        if (error) {
+    //            NSLog(@"error in saving %@", error);
+    //        }else{
+    //            NSLog(@"Data saved successfully");
+    //        }
+    //    }];
 }
 
 - (void)saveContext{
@@ -143,13 +143,13 @@
             abort();
         }
     }
-
+    
 }
 
-+(NSManagedObject *)getObject:(NSString *)className predicate:(NSString*)predicate{
++(NSManagedObject *)getObject:(NSString *)className predicate:(NSPredicate *)predicate{
     NSFetchRequest *fetchRequest = [NSFetchRequest fetchRequestWithEntityName:className];
     if(predicate)
-        fetchRequest.predicate = [NSPredicate predicateWithFormat:predicate];
+        fetchRequest.predicate = predicate;
     fetchRequest.fetchLimit = 1;
     NSError *error;
     NSArray *results = [[PSPointSystemAction sharedAction].managedObjectContext executeFetchRequest:fetchRequest error:&error];
