@@ -22,6 +22,7 @@
 		613B34D41D1BAE1A0097179E /* PSLevelInfo.h in Headers */ = {isa = PBXBuildFile; fileRef = F125FC9E1B415C6400340306 /* PSLevelInfo.h */; };
 		613B34D51D1BAE1A0097179E /* PSPointsSystemConstant.h in Headers */ = {isa = PBXBuildFile; fileRef = F125FCA01B415C6400340306 /* PSPointsSystemConstant.h */; };
 		613B34D61D1BAE1A0097179E /* PSPointSystemAction.h in Headers */ = {isa = PBXBuildFile; fileRef = F125FCA11B415C6400340306 /* PSPointSystemAction.h */; };
+		615580B61D377E5200C7606A /* GamificationLib_db.xcdatamodeld in CopyFiles */ = {isa = PBXBuildFile; fileRef = F125FCC01B41649200340306 /* GamificationLib_db.xcdatamodeld */; };
 		61B28AFB1D1BAE5D00914DEA /* GamificationLib.h in Headers */ = {isa = PBXBuildFile; fileRef = F125FC731B415AD700340306 /* GamificationLib.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9DADDF12282CDAA3134A453D /* libPods-GamificationLib.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A299F0488DEBDC310486AC3E /* libPods-GamificationLib.a */; };
 		F125FC741B415AD700340306 /* GamificationLib.h in Copy Files */ = {isa = PBXBuildFile; fileRef = F125FC731B415AD700340306 /* GamificationLib.h */; };
@@ -44,6 +45,16 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
+		615580B51D377E4900C7606A /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+				615580B61D377E5200C7606A /* GamificationLib_db.xcdatamodeld in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		F125FC6E1B415AD700340306 /* Copy Files */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -267,6 +278,7 @@
 				F125FC6E1B415AD700340306 /* Copy Files */,
 				862AC785AD48B15359DEA5D6 /* [CP] Copy Pods Resources */,
 				613B34C71D1BAE060097179E /* Headers */,
+				615580B51D377E4900C7606A /* CopyFiles */,
 			);
 			buildRules = (
 			);
