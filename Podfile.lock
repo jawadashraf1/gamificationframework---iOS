@@ -22,9 +22,6 @@ PODS:
     - AFNetworking/NSURLSession
   - JSONModel (1.1.0)
   - KGModal (1.2.0)
-  - ObjectiveRecord (1.5.0):
-    - ObjectiveSugar
-  - ObjectiveSugar (1.1.0)
   - SDWebImage (3.7.3):
     - SDWebImage/Core (= 3.7.3)
   - SDWebImage/Core (3.7.3)
@@ -33,17 +30,14 @@ DEPENDENCIES:
   - AFNetworking (~> 2.0)
   - JSONModel
   - KGModal
-  - ObjectiveRecord
   - SDWebImage
 
 SPEC CHECKSUMS:
   AFNetworking: 79f7eb1a0fcfa7beb409332b2ca49afe9ce53b05
   JSONModel: ec77e9865236a7a09d9cf7668df6b4b328d9ec1d
   KGModal: f408e450d4fc683d5cb06b6bb566b04ac34b7ce7
-  ObjectiveRecord: f290d17272e476b3c881300910e98284200c54b6
-  ObjectiveSugar: a6a25f23d657c19df0a0b972466d5b5ca9f5295c
   SDWebImage: 1d2b1a1efda1ade1b00b6f8498865f8ddedc8a84
 
-PODFILE CHECKSUM: da59af9f512653016b56dbc3b74d36341e540f66
+PODFILE CHECKSUM: bede2ba435c584a7eee5f22c3a19c935af61b2a0
 
 COCOAPODS: 1.0.1

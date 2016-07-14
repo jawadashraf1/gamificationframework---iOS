@@ -17,6 +17,7 @@ typedef enum {
 
 #import <Foundation/Foundation.h>
 #import "PSUserBadgesAndLevels.h"
+#import <CoreData/CoreData.h>
 
 @interface PSPointSystemAction : NSObject
 
@@ -27,6 +28,11 @@ typedef enum {
 @property (nonatomic, strong) NSNumber *userId;
 @property (nonatomic, strong) NSString *userName;
 @property (nonatomic, strong) NSString *email;
+
+
+@property (readonly, strong, nonatomic) NSManagedObjectContext *managedObjectContext;
+@property (readonly, strong, nonatomic) NSManagedObjectModel *managedObjectModel;
+@property (readonly, strong, nonatomic) NSPersistentStoreCoordinator *persistentStoreCoordinator;
 
 
 -(id)initWithKey:(NSString *)z_SecretKey andUserId:(NSNumber *)z_userId andUserName:(NSString *)z_UserName andEmail:(NSString *)z_Email;

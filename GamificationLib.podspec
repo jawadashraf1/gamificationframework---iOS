@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "GamificationLib"
-  s.version      = "0.0.57"
+  s.version      = "0.0.60"
   s.summary      = "This library can only be used for gamification."
 
   s.description  = <<-DESC
@@ -89,7 +89,7 @@ Pod::Spec.new do |s|
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  s.source       = { :git => "https://github.com/jawadashraf1/gamificationframework---iOS.git", :tag => "0.0.57" }
+  s.source       = { :git => "https://github.com/jawadashraf1/gamificationframework---iOS.git", :tag => "0.0.60" }
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -148,7 +148,7 @@ Pod::Spec.new do |s|
 
   s.dependency 'AFNetworking' ,'~> 2.0'
   #s.dependency 'MagicalRecord'
-  s.dependency 'ObjectiveRecord'
+  #s.dependency 'ObjectiveRecord'
   s.dependency 'JSONModel'
   s.dependency 'SDWebImage'
   s.dependency 'KGModal'	

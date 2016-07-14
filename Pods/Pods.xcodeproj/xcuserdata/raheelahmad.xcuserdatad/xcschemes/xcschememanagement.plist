@@ -19,16 +19,6 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>ObjectiveRecord.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
-		<key>ObjectiveSugar.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
 		<key>Pods-GamificationLib.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -42,17 +32,12 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>00547DEC04672BE2D47CE62803D5A1BB</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
 		<key>09FA060F1A0492FB25232F489AC4E573</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>18E4787DD0E2EE7856F5F24821D6E6A6</key>
+		<key>30C49EE830EC011520457B52E702DEAA</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -67,12 +52,7 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>ADA9EEA9747E6203C07D2332E7E70008</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>C44DF30F61E0D691D121962AC68466DC</key>
+		<key>B70AAA5C29C27DABB12D7A4FE643431F</key>
 		<dict>
 			<key>primary</key>
 			<true/>

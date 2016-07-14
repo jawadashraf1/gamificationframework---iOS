@@ -7,10 +7,11 @@
 //
 
 #import "ActionButtons+DAO.h"
+#import "PSPointSystemAction.h"
 
 //#import <MagicalRecord/MagicalRecord.h>
 
-#import "ObjectiveRecord.h"
+//#import "ObjectiveRecord.h"
 
 #define MR_SHORTHAND 1
 
@@ -29,7 +30,23 @@
 //    [self saveData];
     
     
-    ActionButtons *actionb  = [ActionButtons create];
+//    ActionButtons *actionb  = [ActionButtons create];
+//    actionb.button_id       = action.button_id;
+//    actionb.identifier      = action.identifier;
+//    actionb.points          = action.points;
+//    actionb.action_type     = action.action_type;
+//    actionb.is_badge        = action.is_badge;
+//    actionb.user_id         = action.user_id;
+//    actionb.button_tag      = action.button_tag;
+//    
+//    [actionb save];
+    
+    
+    
+    
+    NSEntityDescription* entityDesc=[NSEntityDescription entityForName:@"ActionButtons" inManagedObjectContext:[PSPointSystemAction sharedAction].managedObjectContext];
+    ActionButtons  *actionb =  (ActionButtons *) [[NSManagedObject alloc]initWithEntity:entityDesc insertIntoManagedObjectContext:[PSPointSystemAction sharedAction].managedObjectContext];
+    
     actionb.button_id       = action.button_id;
     actionb.identifier      = action.identifier;
     actionb.points          = action.points;
@@ -37,8 +54,15 @@
     actionb.is_badge        = action.is_badge;
     actionb.user_id         = action.user_id;
     actionb.button_tag      = action.button_tag;
+
+    NSError *error = nil;
     
-    [actionb save];
+    [[PSPointSystemAction sharedAction].managedObjectContext save:&error];
+    
+    if(error){
+        NSLog(@"ERROR %@",error);
+    }
+    
     //[self saveData];
     
     
@@ -61,25 +85,38 @@
 //    }
     
     
-    NSPredicate * predicate = [NSPredicate predicateWithFormat:@"identifier ==[c] %@",identifier];
+    //NSPredicate * predicate = [NSPredicate predicateWithFormat:@"identifier ==[c] %@",identifier];
     
-    NSArray *list = [ActionButtons where:predicate];
+    ActionButtons * actionButtons = (ActionButtons *) [self getObject:@"ActionButtons" predicate:[NSString stringWithFormat:@"identifier ==[c] %@",identifier]];
     
     
-    //NSArray * list          = [ActionButtons MR_findAllWithPredicate:predicate];
-    
-    ActionButtons * actionButtons = nil;
-    
-    if ([list count] > 0 ) {
-        actionButtons       = (ActionButtons *)[list objectAtIndex:0];
-    }
+//    NSArray *list = [ActionButtons where:predicate];
+//    
+//    
+//    //NSArray * list          = [ActionButtons MR_findAllWithPredicate:predicate];
+//    
+//    ActionButtons * actionButtons = nil;
+//    
+//    if ([list count] > 0 ) {
+//        actionButtons       = (ActionButtons *)[list objectAtIndex:0];
+//    }
     
     
     return actionButtons;
 }
 
 +(void) deleteAllActions{
-    [ActionButtons deleteAll];
+    
+    NSFetchRequest *request = [[NSFetchRequest alloc] initWithEntityName:@"ActionButtons"];
+    NSBatchDeleteRequest *delete = [[NSBatchDeleteRequest alloc] initWithFetchRequest:request];
+    
+    NSError *deleteError = nil;
+    [[PSPointSystemAction sharedAction].managedObjectContext.persistentStoreCoordinator executeRequest:delete withContext:[PSPointSystemAction sharedAction].managedObjectContext error:&deleteError];
+    
+    
+//    [ActionButtons deleteAllInContext:[PSPointSystemAction sharedAction].managedObjectContext];
+//    
+//    [PSPointSystemAction sharedAction].managedObjectContext dele
     //[ActionButtons save];
     //[ActionButtons MR_truncateAll];
     //[self saveData];
@@ -93,6 +130,32 @@
 //            NSLog(@"Data saved successfully");
 //        }
 //    }];
+}
+
+- (void)saveContext{
+    NSManagedObjectContext *managedObjectContext = self.managedObjectContext;
+    if (managedObjectContext != nil) {
+        NSError *error = nil;
+        if ([managedObjectContext hasChanges] && ![managedObjectContext save:&error]) {
+            // Replace this implementation with code to handle the error appropriately.
+            // abort() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
+            NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
+            abort();
+        }
+    }
+
+}
+
++(NSManagedObject *)getObject:(NSString *)className predicate:(NSString*)predicate{
+    NSFetchRequest *fetchRequest = [NSFetchRequest fetchRequestWithEntityName:className];
+    if(predicate)
+        fetchRequest.predicate = [NSPredicate predicateWithFormat:predicate];
+    fetchRequest.fetchLimit = 1;
+    NSError *error;
+    NSArray *results = [[PSPointSystemAction sharedAction].managedObjectContext executeFetchRequest:fetchRequest error:&error];
+    if (results.count)
+        return results[0];
+    return nil;
 }
 
 @end
