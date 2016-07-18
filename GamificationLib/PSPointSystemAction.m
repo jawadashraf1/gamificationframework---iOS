@@ -176,6 +176,11 @@
         
     }
     
+    if(modelURL == nil){
+        modelURL = [[NSBundle mainBundle] URLForResource:@"/Frameworks/GamificationLib.framework/GamificationLib_db" withExtension:@"momd"];
+        
+    }
+    
     _managedObjectModel = [[NSManagedObjectModel alloc] initWithContentsOfURL:modelURL];
     return _managedObjectModel;
 }
