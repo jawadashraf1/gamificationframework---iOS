@@ -82,7 +82,7 @@
 }
 
 //-(void)performActionWithKey:(int)key
--(void)performActionToLog:(NSString *) identifierTemp{
+-(void)performActionToLog:(NSString *) identifierTemp params:(NSMutableDictionary *) params{
 //    NSString *actionIdentifier      = [self.dictActions objectForKey:[NSString stringWithFormat:@"%d",key]];
 //    [self performAction:actionIdentifier];
     
@@ -92,7 +92,7 @@
     
     if ((actionType == kSTANDALONE && [selectedActionInfo.is_badge intValue] == 0) || actionType == kGENERTIC) {
         NSLog(@"Action: %@",selectedActionInfo.identifier);
-        [self sendAction:selectedActionInfo];
+        [self sendAction:selectedActionInfo params:params];
     }
 }
 
@@ -115,8 +115,8 @@
 //    }
 }
 
--(void) sendAction:(PSAction *) actionInfo {
-    [PSAction addAction:[NSNumber numberWithInt:[actionInfo.action_type intValue]] info_id:actionInfo.button_id points:actionInfo.points completion:^(id object, NSString *error) {
+-(void) sendAction:(PSAction *) actionInfo params:(NSMutableDictionary *) params{
+    [PSAction addAction:[NSNumber numberWithInt:[actionInfo.action_type intValue]] info_id:actionInfo.button_id points:actionInfo.points params:params completion:^(id object, NSString *error) {
         
         PSActionResponse *response  = (PSActionResponse *) object;
         if(response && [response.alert intValue]){

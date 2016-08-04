@@ -72,7 +72,7 @@ static NSTimer *timer;
     }];
 }
 
-+(void) addAction:(NSNumber *) action_id info_id:(NSNumber *)info_id points:(NSNumber *) points completion:(void (^)(id object,NSString *error))completion{
++(void) addAction:(NSNumber *) action_id info_id:(NSNumber *)info_id points:(NSNumber *) points params:(NSMutableDictionary *) params completion:(void (^)(id object,NSString *error))completion{
     
     NSMutableDictionary *parameters = [self getDefaultParams];
     
@@ -80,6 +80,7 @@ static NSTimer *timer;
     [parameters setObject:info_id   forKey:PS_PARAM_INFO_ID];
     [parameters setObject:points    forKey:PS_PARAM_POINTS];
     [parameters setObject:[PSDateTimeUtil getCurrentFormatedDate] forKey:PS_PARAM_CREATED_DATE];
+    [parameters addEntriesFromDictionary:params];
     
     
     [self sendRequest:PS_API_ADD_ACTION paramName:PS_PARAM_INFO parameters:parameters data:nil completion:^(id object, NSString *error) {

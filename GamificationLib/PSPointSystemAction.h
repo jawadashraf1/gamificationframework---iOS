@@ -38,8 +38,8 @@ typedef enum {
 -(id)initWithKey:(NSString *)z_SecretKey andUserId:(NSNumber *)z_userId andUserName:(NSString *)z_UserName andEmail:(NSString *)z_Email;
 -(void) setKeyInfo:(NSString *)z_SecretKey andUserId:(NSNumber *)z_userId andUserName:(NSString *)z_UserName andEmail:(NSString *)z_Email;
 +(PSPointSystemAction *) sharedAction;
--(void)performActionToLog:(NSString *) identifierTemp;
--(void)performAction:(NSString *) action;
+-(void)performActionToLog:(NSString *) identifierTemp params:(NSMutableDictionary *) params;
+//-(void)performAction:(NSString *) action;
 
 -(void)getAllLeaderBoardsWithCompletionHandler:(void (^)(NSString *error, NSArray *arrayLeaderboards))handler ;
 -(void)getLeaderBoardsDetailsForId:(NSString *)leaderboardId WithCompletionHandler:(void (^)(NSString *error, NSArray *arrayLeaderboards))handler;

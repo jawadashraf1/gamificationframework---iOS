@@ -25,7 +25,7 @@
 
 +(void) loadAllActions;
 +(PSAction *) getActionInfo:(NSString *) identifier user_id:(NSNumber *) user_id;
-+(void) addAction:(NSNumber *) action_id info_id:(NSNumber *)info_id points:(NSNumber *) points completion:(void (^)(id object,NSString *error))completion;
++(void) addAction:(NSNumber *) action_id info_id:(NSNumber *)info_id points:(NSNumber *) points params:(NSMutableDictionary *) params completion:(void (^)(id object,NSString *error))completion;
 
 +(void)getLeaderboardsWithCompletionHandler:(void (^)(NSString *err, NSArray *arr))handler;
 +(void)getUsersForLeaderboard:(NSString *)leaderboardId WithCompletionHandler:(void (^)(NSString *err, NSArray *arr))handler;
