@@ -24,6 +24,8 @@
 #define PS_API_ADD_ACTION @"add_action_detail"
 #define PS_API_GET_LEVELS_INFO @"getlevelsinfo"
 #define PS_API_GET_BADGES_AND_LEVELS @"get_badges_and_levels"
+#define PS_API_GET_USER_EARNED_LEVEL_BADGE @"userLatestEarnbadgeLevel"
+#define PS_API_GET_BADGES_INFO @"getbadgesinfo"
 #define PS_PARAM_BADGES_LEVELS @"badges_levels"
 
 // Leaderboard

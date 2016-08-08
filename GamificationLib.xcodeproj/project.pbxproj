@@ -28,6 +28,8 @@
 		614A68F91D589410007FC991 /* SVHTTPClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 614A68F51D589410007FC991 /* SVHTTPClient.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
 		614A68FA1D589410007FC991 /* SVHTTPRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = 614A68F61D589410007FC991 /* SVHTTPRequest.h */; };
 		614A68FB1D589410007FC991 /* SVHTTPRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 614A68F71D589410007FC991 /* SVHTTPRequest.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
+		614A68FE1D589FD8007FC991 /* PSBadgesInfo.h in Headers */ = {isa = PBXBuildFile; fileRef = 614A68FC1D589FD8007FC991 /* PSBadgesInfo.h */; };
+		614A68FF1D589FD8007FC991 /* PSBadgesInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 614A68FD1D589FD8007FC991 /* PSBadgesInfo.m */; };
 		61B28AFB1D1BAE5D00914DEA /* GamificationLib.h in Headers */ = {isa = PBXBuildFile; fileRef = F125FC731B415AD700340306 /* GamificationLib.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9DADDF12282CDAA3134A453D /* libPods-GamificationLib.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A299F0488DEBDC310486AC3E /* libPods-GamificationLib.a */; };
 		F125FC741B415AD700340306 /* GamificationLib.h in Copy Files */ = {isa = PBXBuildFile; fileRef = F125FC731B415AD700340306 /* GamificationLib.h */; };
@@ -70,6 +72,8 @@
 		614A68F51D589410007FC991 /* SVHTTPClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVHTTPClient.m; sourceTree = "<group>"; };
 		614A68F61D589410007FC991 /* SVHTTPRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVHTTPRequest.h; sourceTree = "<group>"; };
 		614A68F71D589410007FC991 /* SVHTTPRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVHTTPRequest.m; sourceTree = "<group>"; };
+		614A68FC1D589FD8007FC991 /* PSBadgesInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PSBadgesInfo.h; sourceTree = "<group>"; };
+		614A68FD1D589FD8007FC991 /* PSBadgesInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSBadgesInfo.m; sourceTree = "<group>"; };
 		A299F0488DEBDC310486AC3E /* libPods-GamificationLib.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-GamificationLib.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BBA527BB4F5D49E6D711C702 /* Pods-GamificationLib.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GamificationLib.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GamificationLib/Pods-GamificationLib.debug.xcconfig"; sourceTree = "<group>"; };
 		EE489BA01E80E61FEC7EE600 /* Pods-GamificationLib.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GamificationLib.release.xcconfig"; path = "Pods/Target Support Files/Pods-GamificationLib/Pods-GamificationLib.release.xcconfig"; sourceTree = "<group>"; };
@@ -229,6 +233,8 @@
 				F125FCA01B415C6400340306 /* PSPointsSystemConstant.h */,
 				F125FCA11B415C6400340306 /* PSPointSystemAction.h */,
 				F125FCA21B415C6400340306 /* PSPointSystemAction.m */,
+				614A68FC1D589FD8007FC991 /* PSBadgesInfo.h */,
+				614A68FD1D589FD8007FC991 /* PSBadgesInfo.m */,
 			);
 			name = Lib;
 			sourceTree = "<group>";
@@ -278,6 +284,7 @@
 				613B34D31D1BAE1A0097179E /* PSHTTPClient.h in Headers */,
 				614A68F81D589410007FC991 /* SVHTTPClient.h in Headers */,
 				613B34D41D1BAE1A0097179E /* PSLevelInfo.h in Headers */,
+				614A68FE1D589FD8007FC991 /* PSBadgesInfo.h in Headers */,
 				613B34D51D1BAE1A0097179E /* PSPointsSystemConstant.h in Headers */,
 				613B34D61D1BAE1A0097179E /* PSPointSystemAction.h in Headers */,
 			);
@@ -377,6 +384,7 @@
 			files = (
 				F1E7020C1B4E6E2900C996E8 /* AllActionsView.m in Sources */,
 				F125FCAC1B415C6400340306 /* PSPointSystemAction.m in Sources */,
+				614A68FF1D589FD8007FC991 /* PSBadgesInfo.m in Sources */,
 				F125FCA31B415C6400340306 /* GHActionButton.m in Sources */,
 				614A68F91D589410007FC991 /* SVHTTPClient.m in Sources */,
 				6112EF2F1D585B5A005BD8C9 /* KGModal_G.m in Sources */,

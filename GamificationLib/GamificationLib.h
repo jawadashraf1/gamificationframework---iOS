@@ -12,6 +12,7 @@
 #import "PSUserBadgesAndLevels.h"
 #import "AllActionsView.h"
 #import "PSLevelInfo.h"
+#import "PSBadgesInfo.h"
 
 @interface GamificationLib : NSObject
 

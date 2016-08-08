@@ -21,5 +21,6 @@
 @property (nonatomic, strong) NSString<Optional> * pointslbl;
 
 +(void) getUserBadgesAndLevels:(BOOL) isDeleteExisting completion:(void (^)(id object,NSString *error))completion;
++(void) getUserEarnedBadgeAndLevel:(void (^)(id object,NSString *error))completion;
 
 @end

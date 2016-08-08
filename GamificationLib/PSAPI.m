@@ -85,8 +85,17 @@
     [[PSHTTPClient sharedClient] sendRequest:apiName paramName:nil parameters:parameters data:nil completion:^(id responseobject, NSError *error) {
         
         if(!error){
+            
+            if([responseobject isKindOfClass:[NSDictionary class]]){
+                if([responseobject valueForKey:@"data"]!=(id)[NSNull null]){
+                    completion (responseobject,nil);
+                } else {
+                    completion (nil,@"");
+                }
+            } else {
             NSDictionary *responseDict= [NSJSONSerialization JSONObjectWithData:responseobject options:NSJSONReadingMutableContainers error:nil];
             completion (responseDict,nil);
+            }
             
         } else {
             completion (nil,error.localizedDescription);

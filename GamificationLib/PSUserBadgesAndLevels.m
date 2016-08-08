@@ -7,6 +7,7 @@
 //
 
 #import "PSUserBadgesAndLevels.h"
+#import "PSBadgesInfo.h"
 
 @implementation PSUserBadgesAndLevels
 
@@ -33,6 +34,45 @@
         
     }];
 }
+
+
++(void) getUserEarnedBadgeAndLevel:(void (^)(id object,NSString *error))completion{
+    
+    NSDictionary *parameters = [self getDefaultParams];
+    
+    if(!parameters){
+        return;
+    }
+    
+    [self sendRequest:PS_API_GET_USER_EARNED_LEVEL_BADGE parameters:parameters completion:^(id object, NSString *error) {
+        if(object){
+            
+            
+            NSDictionary *dictionary = (NSDictionary *) object;
+            
+            NSDictionary * earnedBadgeInfo = [[dictionary valueForKey:@"data"] valueForKey:@"latestearnbadge"];
+            NSDictionary * earnedLevelInfo = [[dictionary valueForKey:@"data"] valueForKey:@"latestearnlevel"];
+            
+            NSMutableArray *earnedBadgesArray = [[NSMutableArray alloc] init];
+            NSMutableArray *earnedLevelsArray = [[NSMutableArray alloc] init];
+            
+            if(earnedBadgeInfo){
+                PSBadgesInfo *badge = [[PSBadgesInfo alloc] initUsingData:earnedBadgeInfo];
+                [earnedBadgesArray addObject:badge];
+            }
+            
+            if(earnedLevelInfo){
+                PSBadgesInfo *badge = [[PSBadgesInfo alloc] initUsingData:earnedLevelInfo];
+                [earnedLevelsArray addObject:badge];
+            }
+            
+            completion(@[earnedLevelsArray,earnedBadgesArray], nil);
+        } else {
+            completion(nil,error);
+        }
+    }];
+}
+
 
 
 @end
