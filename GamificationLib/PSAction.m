@@ -48,6 +48,10 @@ static NSTimer *timer;
     
     NSDictionary *parameters = [self getDefaultParams];
     
+    if(!parameters){
+        return;
+    }
+    
     [self sendRequest:PS_API_GET_BUTTON_ACTIONS paramName:PS_PARAM_ACTIONS parameters:parameters data:nil completion:^(id object, NSString *error) {
         if(object){
             

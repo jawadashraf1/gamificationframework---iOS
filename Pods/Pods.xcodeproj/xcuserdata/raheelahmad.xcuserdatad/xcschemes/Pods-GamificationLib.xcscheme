@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '30C49EE830EC011520457B52E702DEAA'
+               BlueprintIdentifier = '91E84BA4C4DF1B7588A37CA982EF3288'
                BlueprintName = 'Pods-GamificationLib'
                ReferencedContainer = 'container:Pods.xcodeproj'
                BuildableName = 'libPods-GamificationLib.a'>

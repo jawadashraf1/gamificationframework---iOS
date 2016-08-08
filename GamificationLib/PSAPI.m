@@ -9,6 +9,7 @@
 #import "PSAPI.h"
 #import "PSHTTPClient.h"
 #import "PSPointSystemAction.h"
+#import "SVHTTPRequest.h"
 
 
 @implementation PSAPI
@@ -30,76 +31,77 @@
 
 +(void)sendRequest:(NSString *)apiName paramName:(NSString *) paramName parameters:(NSDictionary *)parameters data:(NSData *)imgData completion:(void (^)(id object, NSString *))completion {
     
-    [[PSHTTPClient sharedClient] postRequestDataWithMethodName:apiName withParameters:parameters withImageData:imgData success:^(AFHTTPRequestOperation *operation, id responseObject) {
+    
+    [[PSHTTPClient sharedClient] sendRequest:apiName paramName:paramName parameters:parameters data:nil completion:^(id responseobject, NSError *error) {
         
-        NSDictionary *responseDict= [NSJSONSerialization JSONObjectWithData:responseObject options:NSJSONReadingMutableContainers error:nil];
-        
-        if ([[responseDict objectForKey:PP_PARAM_SUCCESS] boolValue]==true) {
-            id obj = [[responseDict valueForKey:PP_PARAM_DATA] valueForKey:paramName];
-            if(obj!=(id)[NSNull null]){
-                completion (obj,nil);
-            }else{
-                completion (nil,@"No data found");
+        if(!error){
+            
+            
+            NSDictionary *responseDict= (NSDictionary *)responseobject;//[NSJSONSerialization JSONObjectWithData:responseobject options:NSJSONReadingMutableContainers error:nil];
+            
+            if ([[responseDict objectForKey:PP_PARAM_SUCCESS] boolValue]==true) {
+                id obj = [[responseDict valueForKey:PP_PARAM_DATA] valueForKey:paramName];
+                if(obj!=(id)[NSNull null]){
+                    completion (obj,nil);
+                }else{
+                    completion (nil,@"No data found");
+                }
+            } else{
+                completion (nil,[responseDict valueForKey:PP_PARAM_MESSAGE]);
             }
-        } else{
-            completion (nil,[responseDict valueForKey:PP_PARAM_MESSAGE]);
+
+            
+        } else {
+            completion (nil,error.localizedDescription);
         }
         
-        
-    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-        completion (nil,error.localizedDescription);
     }];
     
-}
-
-+(void)sendRequest:(NSString *)apiName parameters:(NSDictionary *)parameters data:(NSData *)imgData completion:(void (^)(id object, NSString *message))completion {
-    
-    [[PSHTTPClient sharedClient] postRequestDataWithMethodName:apiName withParameters:parameters withImageData:imgData success:^(AFHTTPRequestOperation *operation, id responseObject) {
-        
-        NSDictionary *responseDict= [NSJSONSerialization JSONObjectWithData:responseObject options:NSJSONReadingMutableContainers error:nil];
-        
-        if ([[responseDict objectForKey:PP_PARAM_SUCCESS] boolValue]==true) {
-            completion ([responseDict valueForKey:PP_PARAM_MESSAGE],nil);
-        } else{
-            completion (nil,[responseDict valueForKey:PP_PARAM_MESSAGE]);
-        }
-        
-        
-    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-        completion (nil,error.localizedDescription);
-    }];
-    
-}
-
-+(void)sendRequest:(NSString *)apiName parameters:(NSDictionary *)parameters keyword:(NSString *) keyword data:(NSData *)imgData completion:(void (^)(id object, NSString *message))completion {
-    
-    [[PSHTTPClient sharedClient] postRequestDataWithMethodName:apiName withParameters:parameters withImageData:imgData keyword:keyword success:^(AFHTTPRequestOperation *operation, id responseObject) {
-        
-        NSDictionary *responseDict= [NSJSONSerialization JSONObjectWithData:responseObject options:NSJSONReadingMutableContainers error:nil];
-        
-        if ([[responseDict objectForKey:PP_PARAM_SUCCESS] boolValue]==true) {
-            completion ([responseDict valueForKey:PP_PARAM_MESSAGE],nil);
-        } else{
-            completion (nil,[responseDict valueForKey:PP_PARAM_MESSAGE]);
-        }
-        
-        
-    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-        completion (nil,error.localizedDescription);
-    }];
+//    [[PSHTTPClient sharedClient] postRequestDataWithMethodName:apiName withParameters:apiName withImageData:imgData success:^(AFHTTPRequestOperation *operation, id responseObject) {
+//        
+//        NSDictionary *responseDict= [NSJSONSerialization JSONObjectWithData:responseObject options:NSJSONReadingMutableContainers error:nil];
+//        
+//        if ([[responseDict objectForKey:PP_PARAM_SUCCESS] boolValue]==true) {
+//            id obj = [[responseDict valueForKey:PP_PARAM_DATA] valueForKey:paramName];
+//            if(obj!=(id)[NSNull null]){
+//                completion (obj,nil);
+//            }else{
+//                completion (nil,@"No data found");
+//            }
+//        } else{
+//            completion (nil,[responseDict valueForKey:PP_PARAM_MESSAGE]);
+//        }
+//        
+//        
+//    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+//        completion (nil,error.localizedDescription);
+//    }];
     
 }
-
 
 +(void)sendRequest:(NSString *)apiName parameters:(NSDictionary *)parameters completion:(void (^)(id object, NSString *message))completion {
     
-    [[PSHTTPClient sharedClient] postRequestDataWithMethodName:apiName withParameters:parameters withImageData:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
+    
+    [[PSHTTPClient sharedClient] sendRequest:apiName paramName:nil parameters:parameters data:nil completion:^(id responseobject, NSError *error) {
         
-        NSDictionary *responseDict= [NSJSONSerialization JSONObjectWithData:responseObject options:NSJSONReadingMutableContainers error:nil];
-        completion (responseDict,nil);
-    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-        completion (nil,error.localizedDescription);
+        if(!error){
+            NSDictionary *responseDict= [NSJSONSerialization JSONObjectWithData:responseobject options:NSJSONReadingMutableContainers error:nil];
+            completion (responseDict,nil);
+            
+        } else {
+            completion (nil,error.localizedDescription);
+        }
+        
     }];
+    
+    
+//    [[PSHTTPClient sharedClient] postRequestDataWithMethodName:apiName withParameters:parameters withImageData:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
+//        
+//        NSDictionary *responseDict= [NSJSONSerialization JSONObjectWithData:responseObject options:NSJSONReadingMutableContainers error:nil];
+//        completion (responseDict,nil);
+//    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+//        completion (nil,error.localizedDescription);
+//    }];
     
 }
 
@@ -108,15 +110,32 @@
     
     NSString *secTok    = [[NSUserDefaults standardUserDefaults] objectForKey:@"secretKey"];
     NSNumber *userId    = [[NSUserDefaults standardUserDefaults] objectForKey:@"userId"];
+    NSString *userName  = [[NSUserDefaults standardUserDefaults] objectForKey:@"userName"];
+    NSNumber *email    = [[NSUserDefaults standardUserDefaults] objectForKey:@"email"];
     
+    if(!secTok){
+        return nil;
+    }
+    
+    if(!userId){
+        return nil;
+    }
+    
+    if(!userName){
+        return nil;
+    }
+    
+    if(!email){
+        return nil;
+    }
     
     NSMutableDictionary *parameters = [[NSMutableDictionary alloc] init];
     [parameters setObject:secTok forKey:PS_PARAM_TOKEN];
     [parameters setObject:userId forKey:PS_PARAM_USER_ID];
     
-    [parameters setObject:[PSPointSystemAction sharedAction].userName   forKey:@"username"];
-    [parameters setObject:[PSPointSystemAction sharedAction].email      forKey:@"email"];
-    [parameters setObject:[self getFormattedDate]                       forKey:@"created_date"];
+    [parameters setObject:userName   forKey:@"username"];
+    [parameters setObject:email      forKey:@"email"];
+    [parameters setObject:[self getFormattedDate]  forKey:@"created_date"];
     
     return parameters;
 }

@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "GamificationLib"
-  s.version      = "0.0.75"
+  s.version      = "0.0.78"
   s.summary      = "This library can only be used for gamification."
 
   s.description  = <<-DESC
@@ -89,7 +89,7 @@ Pod::Spec.new do |s|
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  s.source       = { :git => "https://github.com/jawadashraf1/gamificationframework---iOS.git", :tag => "0.0.75" }
+  s.source       = { :git => "https://github.com/jawadashraf1/gamificationframework---iOS.git", :tag => "0.0.78" }
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -146,11 +146,11 @@ Pod::Spec.new do |s|
   # s.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libxml2" }
   # s.dependency "JSONKit", "~> 1.4"
 
-  s.dependency 'AFNetworking' ,'~> 2.0'
+  #s.dependency 'AFNetworking' ,'~> 1.3.0'
   #s.dependency 'MagicalRecord'
-  #s.dependency 'ObjectiveRecord'
+  #s.dependency 'SVHTTPRequest','~> 0.5'
   s.dependency 'JSONModel'
   s.dependency 'SDWebImage'
-  s.dependency 'KGModal'	
+  #s.dependency 'KGModal'	
 
 end

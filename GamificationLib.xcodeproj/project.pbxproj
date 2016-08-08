@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6112EF2E1D585B5A005BD8C9 /* KGModal_G.h in Headers */ = {isa = PBXBuildFile; fileRef = 6112EF2C1D585B5A005BD8C9 /* KGModal_G.h */; };
+		6112EF2F1D585B5A005BD8C9 /* KGModal_G.m in Sources */ = {isa = PBXBuildFile; fileRef = 6112EF2D1D585B5A005BD8C9 /* KGModal_G.m */; };
 		613B34C81D1BAE1A0097179E /* ActionButtons.h in Headers */ = {isa = PBXBuildFile; fileRef = F125FCB41B4160A800340306 /* ActionButtons.h */; };
 		613B34C91D1BAE1A0097179E /* ActionButtons+DAO.h in Headers */ = {isa = PBXBuildFile; fileRef = F125FCB61B4160A800340306 /* ActionButtons+DAO.h */; };
 		613B34CA1D1BAE1A0097179E /* AllActionsView.h in Headers */ = {isa = PBXBuildFile; fileRef = F1E7020A1B4E6E2900C996E8 /* AllActionsView.h */; };
@@ -22,6 +24,10 @@
 		613B34D41D1BAE1A0097179E /* PSLevelInfo.h in Headers */ = {isa = PBXBuildFile; fileRef = F125FC9E1B415C6400340306 /* PSLevelInfo.h */; };
 		613B34D51D1BAE1A0097179E /* PSPointsSystemConstant.h in Headers */ = {isa = PBXBuildFile; fileRef = F125FCA01B415C6400340306 /* PSPointsSystemConstant.h */; };
 		613B34D61D1BAE1A0097179E /* PSPointSystemAction.h in Headers */ = {isa = PBXBuildFile; fileRef = F125FCA11B415C6400340306 /* PSPointSystemAction.h */; };
+		614A68F81D589410007FC991 /* SVHTTPClient.h in Headers */ = {isa = PBXBuildFile; fileRef = 614A68F41D589410007FC991 /* SVHTTPClient.h */; };
+		614A68F91D589410007FC991 /* SVHTTPClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 614A68F51D589410007FC991 /* SVHTTPClient.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
+		614A68FA1D589410007FC991 /* SVHTTPRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = 614A68F61D589410007FC991 /* SVHTTPRequest.h */; };
+		614A68FB1D589410007FC991 /* SVHTTPRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 614A68F71D589410007FC991 /* SVHTTPRequest.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
 		61B28AFB1D1BAE5D00914DEA /* GamificationLib.h in Headers */ = {isa = PBXBuildFile; fileRef = F125FC731B415AD700340306 /* GamificationLib.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9DADDF12282CDAA3134A453D /* libPods-GamificationLib.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A299F0488DEBDC310486AC3E /* libPods-GamificationLib.a */; };
 		F125FC741B415AD700340306 /* GamificationLib.h in Copy Files */ = {isa = PBXBuildFile; fileRef = F125FC731B415AD700340306 /* GamificationLib.h */; };
@@ -58,6 +64,12 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		6112EF2C1D585B5A005BD8C9 /* KGModal_G.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KGModal_G.h; sourceTree = "<group>"; };
+		6112EF2D1D585B5A005BD8C9 /* KGModal_G.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KGModal_G.m; sourceTree = "<group>"; };
+		614A68F41D589410007FC991 /* SVHTTPClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVHTTPClient.h; sourceTree = "<group>"; };
+		614A68F51D589410007FC991 /* SVHTTPClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVHTTPClient.m; sourceTree = "<group>"; };
+		614A68F61D589410007FC991 /* SVHTTPRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVHTTPRequest.h; sourceTree = "<group>"; };
+		614A68F71D589410007FC991 /* SVHTTPRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVHTTPRequest.m; sourceTree = "<group>"; };
 		A299F0488DEBDC310486AC3E /* libPods-GamificationLib.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-GamificationLib.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BBA527BB4F5D49E6D711C702 /* Pods-GamificationLib.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GamificationLib.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GamificationLib/Pods-GamificationLib.debug.xcconfig"; sourceTree = "<group>"; };
 		EE489BA01E80E61FEC7EE600 /* Pods-GamificationLib.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GamificationLib.release.xcconfig"; path = "Pods/Target Support Files/Pods-GamificationLib/Pods-GamificationLib.release.xcconfig"; sourceTree = "<group>"; };
@@ -120,6 +132,19 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		6112EF2B1D585A9B005BD8C9 /* ExternalLibs */ = {
+			isa = PBXGroup;
+			children = (
+				614A68F41D589410007FC991 /* SVHTTPClient.h */,
+				614A68F51D589410007FC991 /* SVHTTPClient.m */,
+				614A68F61D589410007FC991 /* SVHTTPRequest.h */,
+				614A68F71D589410007FC991 /* SVHTTPRequest.m */,
+				6112EF2C1D585B5A005BD8C9 /* KGModal_G.h */,
+				6112EF2D1D585B5A005BD8C9 /* KGModal_G.m */,
+			);
+			name = ExternalLibs;
+			sourceTree = "<group>";
+		};
 		64BC9E2ACC2633D9D05C113C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -178,6 +203,7 @@
 		F125FC8A1B415C5B00340306 /* Lib */ = {
 			isa = PBXGroup;
 			children = (
+				6112EF2B1D585A9B005BD8C9 /* ExternalLibs */,
 				F151F62B1B4E6D870087D52A /* AddActionAndPoints */,
 				F13A3A0B1B427E210075CBC0 /* PSUserBadgesAndLevels.h */,
 				F13A3A0C1B427E210075CBC0 /* PSUserBadgesAndLevels.m */,
@@ -240,14 +266,17 @@
 				613B34C91D1BAE1A0097179E /* ActionButtons+DAO.h in Headers */,
 				613B34CA1D1BAE1A0097179E /* AllActionsView.h in Headers */,
 				613B34CB1D1BAE1A0097179E /* PSUserBadgesAndLevels.h in Headers */,
+				6112EF2E1D585B5A005BD8C9 /* KGModal_G.h in Headers */,
 				613B34CC1D1BAE1A0097179E /* GHActionButton.h in Headers */,
 				613B34CD1D1BAE1A0097179E /* PSAction.h in Headers */,
+				614A68FA1D589410007FC991 /* SVHTTPRequest.h in Headers */,
 				613B34CE1D1BAE1A0097179E /* PSActionResponse.h in Headers */,
 				613B34CF1D1BAE1A0097179E /* PSAlertUtil.h in Headers */,
 				613B34D01D1BAE1A0097179E /* PSAlertView.h in Headers */,
 				613B34D11D1BAE1A0097179E /* PSAPI.h in Headers */,
 				613B34D21D1BAE1A0097179E /* PSDateTimeUtil.h in Headers */,
 				613B34D31D1BAE1A0097179E /* PSHTTPClient.h in Headers */,
+				614A68F81D589410007FC991 /* SVHTTPClient.h in Headers */,
 				613B34D41D1BAE1A0097179E /* PSLevelInfo.h in Headers */,
 				613B34D51D1BAE1A0097179E /* PSPointsSystemConstant.h in Headers */,
 				613B34D61D1BAE1A0097179E /* PSPointSystemAction.h in Headers */,
@@ -349,6 +378,8 @@
 				F1E7020C1B4E6E2900C996E8 /* AllActionsView.m in Sources */,
 				F125FCAC1B415C6400340306 /* PSPointSystemAction.m in Sources */,
 				F125FCA31B415C6400340306 /* GHActionButton.m in Sources */,
+				614A68F91D589410007FC991 /* SVHTTPClient.m in Sources */,
+				6112EF2F1D585B5A005BD8C9 /* KGModal_G.m in Sources */,
 				F125FCAB1B415C6400340306 /* PSLevelInfo.m in Sources */,
 				F125FCA91B415C6400340306 /* PSDateTimeUtil.m in Sources */,
 				F125FCA51B415C6400340306 /* PSActionResponse.m in Sources */,
@@ -360,6 +391,7 @@
 				F125FCB91B4160A800340306 /* ActionButtons+DAO.m in Sources */,
 				F125FCC21B41649200340306 /* GamificationLib_db.xcdatamodeld in Sources */,
 				F125FCB81B4160A800340306 /* ActionButtons.m in Sources */,
+				614A68FB1D589410007FC991 /* SVHTTPRequest.m in Sources */,
 				F125FCA41B415C6400340306 /* PSAction.m in Sources */,
 				F125FCA81B415C6400340306 /* PSAPI.m in Sources */,
 			);

@@ -18,8 +18,6 @@
 
 
 +(void) sendRequest:(NSString *) apiName paramName:(NSString *) paramName parameters:(NSDictionary *) parameters data:(NSData *) imgData completion:(void (^)(id object,NSString *message))completion;
-+(void) sendRequest:(NSString *)apiName parameters:(NSDictionary *)parameters data:(NSData *)imgData completion:(void (^)(id object, NSString * message))completion;
-+(void) sendRequest:(NSString *)apiName parameters:(NSDictionary *)parameters keyword:(NSString *) keyword data:(NSData *)imgData completion:(void (^)(id object, NSString *message))completion;
 
 +(void)sendRequest:(NSString *)apiName parameters:(NSDictionary *)parameters completion:(void (^)(id object, NSString *message))completion;
 

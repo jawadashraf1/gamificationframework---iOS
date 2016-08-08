@@ -3,12 +3,12 @@
 
 target 'GamificationLib' do
 
-pod 'AFNetworking', '~> 2.0' 
+#pod 'AFNetworking', '~> 1.3.0'
+#pod 'SVHTTPRequest','~> 0.5'
 #pod 'MagicalRecord'
 #pod 'ObjectiveRecord'
 pod 'JSONModel'
 pod 'SDWebImage'
-pod 'KGModal'
 
 end
 

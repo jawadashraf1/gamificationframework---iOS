@@ -8,23 +8,23 @@
 
 #import <UIKit/UIKit.h>
 
-extern NSString *const KGModalWillShowNotification;
-extern NSString *const KGModalDidShowNotification;
-extern NSString *const KGModalWillHideNotification;
-extern NSString *const KGModalDidHideNotification;
+extern NSString *const KGModalWillShowNotification_G;
+extern NSString *const KGModalDidShowNotification_G;
+extern NSString *const KGModalWillHideNotification_G;
+extern NSString *const KGModalDidHideNotification_G;
 
-typedef NS_ENUM(NSUInteger, KGModalBackgroundDisplayStyle){
-    KGModalBackgroundDisplayStyleGradient,
-    KGModalBackgroundDisplayStyleSolid
+typedef NS_ENUM(NSUInteger, KGModalBackgroundDisplayStyle_G){
+    KGModalBackgroundDisplayStyleGradient_G,
+    KGModalBackgroundDisplayStyleSolid_G
 };
 
-typedef NS_ENUM(NSUInteger, KGModalCloseButtonType){
-    KGModalCloseButtonTypeNone,
-    KGModalCloseButtonTypeLeft,
-    KGModalCloseButtonTypeRight
+typedef NS_ENUM(NSUInteger, KGModalCloseButtonType_G){
+    KGModalCloseButtonTypeNone_G,
+    KGModalCloseButtonTypeLeft_G,
+    KGModalCloseButtonTypeRight_G
 };
 
-@interface KGModal : NSObject
+@interface KGModal_G : NSObject
 
 // Determines if the modal should dismiss if the user taps outside of the modal view
 // Defaults to YES
@@ -36,7 +36,7 @@ typedef NS_ENUM(NSUInteger, KGModalCloseButtonType){
 
 // Determins close button type (None/Left/Right)
 // Defaults to Left
-@property (nonatomic) KGModalCloseButtonType closeButtonType;
+@property (nonatomic) KGModalCloseButtonType_G closeButtonType;
 
 // The background color of the modal window
 // Defaults black with 0.5 opacity
@@ -44,7 +44,7 @@ typedef NS_ENUM(NSUInteger, KGModalCloseButtonType){
 
 // The background display style, can be a transparent radial gradient or a transparent black
 // Defaults to gradient, this looks better but takes a bit more time to display on the retina iPad
-@property (nonatomic) KGModalBackgroundDisplayStyle backgroundDisplayStyle;
+@property (nonatomic) KGModalBackgroundDisplayStyle_G backgroundDisplayStyle;
 
 // Determines if the modal should rotate when the device rotates
 // Defaults to YES, only applies to iOS5

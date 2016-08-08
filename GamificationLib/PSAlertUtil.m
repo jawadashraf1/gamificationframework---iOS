@@ -8,7 +8,7 @@
 
 #import "PSAlertUtil.h"
 #import <SDWebImage/UIImageView+WebCache.h>
-#import "KGModal.h"
+#import "KGModal_G.h"
 
 @implementation PSAlertUtil
 
@@ -36,7 +36,7 @@
     alertView.titleLbl.text = title;
     alertView.subTitleLbl.text   = subTitle;
     [alertView.imgView sd_setImageWithURL:[NSURL URLWithString:img]];
-    [[KGModal sharedInstance] showWithContentView:alertView andAnimated:YES];
+    [[KGModal_G sharedInstance] showWithContentView:alertView andAnimated:YES];
 }
 
 @end

@@ -99,6 +99,10 @@
 -(void)saveSecretKeyAndUserId{
     [[NSUserDefaults standardUserDefaults] setObject:self.secretKey forKey:@"secretKey"];
     [[NSUserDefaults standardUserDefaults] setObject:self.userId    forKey:@"userId"];
+    [[NSUserDefaults standardUserDefaults] setObject:self.userName    forKey:@"userName"];
+    [[NSUserDefaults standardUserDefaults] setObject:self.email    forKey:@"email"];
+    
+    [[NSUserDefaults standardUserDefaults] synchronize];
     self.dictActions                = [[NSDictionary alloc] init];
     self.dictActions                = [self getDictionaryFromPlistFileWithName:@"ActionButtonsStrings"];
 }
