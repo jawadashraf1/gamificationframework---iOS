@@ -56,12 +56,12 @@
             NSMutableArray *earnedBadgesArray = [[NSMutableArray alloc] init];
             NSMutableArray *earnedLevelsArray = [[NSMutableArray alloc] init];
             
-            if(earnedBadgeInfo){
+            if(earnedBadgeInfo && earnedBadgeInfo.allKeys.count > 0){
                 PSBadgesInfo *badge = [[PSBadgesInfo alloc] initUsingData:earnedBadgeInfo];
                 [earnedBadgesArray addObject:badge];
             }
             
-            if(earnedLevelInfo){
+            if(earnedLevelInfo && earnedLevelInfo.allKeys.count > 0){
                 PSBadgesInfo *badge = [[PSBadgesInfo alloc] initUsingData:earnedLevelInfo];
                 [earnedLevelsArray addObject:badge];
             }
