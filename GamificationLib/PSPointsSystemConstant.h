@@ -16,6 +16,7 @@
 #define PS_PARAM_ACTION_ID @"action_id"
 #define PS_PARAM_INFO_ID @"info_id"
 #define PS_PARAM_POINTS @"points"
+#define PS_PARAM_PARAMS @"params"
 #define PS_PARAM_CREATED_DATE @"created_date"
 #define PS_PARAM_LEVELS @"levels"
 

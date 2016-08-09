@@ -13,6 +13,7 @@
 @property (nonatomic, strong) NSString<Optional> * name;
 @property (nonatomic, strong) NSString<Optional> * desc;
 @property (nonatomic, strong) NSString<Optional> * image_url;
+@property (nonatomic, strong) NSNumber<Optional> * is_earned;
 
 
 +(void) getBadgesInfo:(void (^)(id object,NSString *error))completion;

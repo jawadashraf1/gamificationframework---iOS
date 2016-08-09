@@ -81,10 +81,7 @@
     return parentMethodName;
 }
 
-//-(void)performActionWithKey:(int)key
--(void)performActionToLog:(NSString *) identifierTemp params:(NSMutableDictionary *) params{
-//    NSString *actionIdentifier      = [self.dictActions objectForKey:[NSString stringWithFormat:@"%d",key]];
-//    [self performAction:actionIdentifier];
+-(void)performActionToLog:(NSString *) identifierTemp params:(NSMutableDictionary *) params completionAction:(void (^)(bool success))completionAction{
     
     NSString *identifier            = identifierTemp;
     PSAction * selectedActionInfo   = [PSAction getActionInfo:identifier   user_id:[NSNumber numberWithInt:0]];
@@ -92,7 +89,7 @@
     
     if ((actionType == kSTANDALONE && [selectedActionInfo.is_badge intValue] == 0) || actionType == kGENERTIC) {
         NSLog(@"Action: %@",selectedActionInfo.identifier);
-        [self sendAction:selectedActionInfo params:params];
+        [self sendAction:selectedActionInfo params:params completionAction:completionAction];
     }
 }
 
@@ -107,35 +104,30 @@
     self.dictActions                = [self getDictionaryFromPlistFileWithName:@"ActionButtonsStrings"];
 }
 
-
--(void) performAction:(NSString *) action{
-//    self.selectedButtonAction       =  action;
-//    PSAction * selectedActionInfo   = [PSAction getActionInfo:action user_id:self.userId];
-//    kActionTypes actionType         = (kActionTypes)[selectedActionInfo.action_type integerValue];
-//
-//    if ((actionType == kSTANDALONE && [selectedActionInfo.is_badge intValue] == 0) || actionType == kGENERTIC) {
-//        NSLog(@"Action: %@",action);
-//        [self sendAction:selectedActionInfo];
-//    }
-}
-
--(void) sendAction:(PSAction *) actionInfo params:(NSMutableDictionary *) params{
+-(void) sendAction:(PSAction *) actionInfo params:(NSMutableDictionary *) params completionAction:(void (^)(bool success))completionAction{
     [PSAction addAction:[NSNumber numberWithInt:[actionInfo.action_type intValue]] info_id:actionInfo.button_id points:actionInfo.points params:params completion:^(id object, NSString *error) {
         
         PSActionResponse *response  = (PSActionResponse *) object;
+        bool isSuccess = NO;
         if(response && [response.alert intValue]){
+            isSuccess = YES;
             [self performSelectorOnMainThread:@selector(showCustomViewMessage:) withObject:response waitUntilDone:YES];
+        } else {
+            isSuccess = NO;
         }
+        
+        if(isSuccess){
+            if(completionAction){
+                completionAction(isSuccess);
+            }
+        }
+        
     }];
 }
 
 -(void) showCustomViewMessage:(PSActionResponse *) response{
     [PSAlertUtil showCustomAlertView:response.message title:response.title subTitle:response.subTitle img:response.img];
 }
-
-
-
-
 
 -(void)getAllLeaderBoardsWithCompletionHandler:(void (^)(NSString *error, NSArray *arrayLeaderboards))handler {
     [PSAction getLeaderboardsWithCompletionHandler:^(NSString *err, NSArray *arr) {

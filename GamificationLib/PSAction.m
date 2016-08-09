@@ -84,7 +84,21 @@ static NSTimer *timer;
     [parameters setObject:info_id   forKey:PS_PARAM_INFO_ID];
     [parameters setObject:points    forKey:PS_PARAM_POINTS];
     [parameters setObject:[PSDateTimeUtil getCurrentFormatedDate] forKey:PS_PARAM_CREATED_DATE];
-    [parameters addEntriesFromDictionary:params];
+    
+    NSError *error;
+    NSData *jsonData = [NSJSONSerialization dataWithJSONObject:params
+                                                       options:NSJSONWritingPrettyPrinted // Pass 0 if you don't care about the readability of the generated string
+                                                         error:&error];
+    
+    if (! jsonData) {
+        NSLog(@"Got an error: %@", error);
+    } else {
+        NSString *jsonString = [[NSString alloc] initWithData:jsonData encoding:NSUTF8StringEncoding];
+        [parameters setObject:jsonString    forKey:PS_PARAM_PARAMS];
+        //[parameters addEntriesFromDictionary:params];
+    }
+    
+    
     
     
     [self sendRequest:PS_API_ADD_ACTION paramName:PS_PARAM_INFO parameters:parameters data:nil completion:^(id object, NSString *error) {
