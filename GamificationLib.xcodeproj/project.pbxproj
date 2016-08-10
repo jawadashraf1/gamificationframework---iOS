@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6103BD0A1D5AEF09003EAC76 /* PSSmiles.h in Headers */ = {isa = PBXBuildFile; fileRef = 6103BD081D5AEF09003EAC76 /* PSSmiles.h */; };
+		6103BD0B1D5AEF09003EAC76 /* PSSmiles.m in Sources */ = {isa = PBXBuildFile; fileRef = 6103BD091D5AEF09003EAC76 /* PSSmiles.m */; };
+		6103BD0E1D5AF00D003EAC76 /* PSSmilesData.h in Headers */ = {isa = PBXBuildFile; fileRef = 6103BD0C1D5AF00D003EAC76 /* PSSmilesData.h */; };
+		6103BD0F1D5AF00D003EAC76 /* PSSmilesData.m in Sources */ = {isa = PBXBuildFile; fileRef = 6103BD0D1D5AF00D003EAC76 /* PSSmilesData.m */; };
+		6103BD141D5AF131003EAC76 /* PSSmilesAPI.h in Headers */ = {isa = PBXBuildFile; fileRef = 6103BD121D5AF131003EAC76 /* PSSmilesAPI.h */; };
+		6103BD151D5AF131003EAC76 /* PSSmilesAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 6103BD131D5AF131003EAC76 /* PSSmilesAPI.m */; };
 		6112EF2E1D585B5A005BD8C9 /* KGModal_G.h in Headers */ = {isa = PBXBuildFile; fileRef = 6112EF2C1D585B5A005BD8C9 /* KGModal_G.h */; };
 		6112EF2F1D585B5A005BD8C9 /* KGModal_G.m in Sources */ = {isa = PBXBuildFile; fileRef = 6112EF2D1D585B5A005BD8C9 /* KGModal_G.m */; };
 		613B34C81D1BAE1A0097179E /* ActionButtons.h in Headers */ = {isa = PBXBuildFile; fileRef = F125FCB41B4160A800340306 /* ActionButtons.h */; };
@@ -66,6 +72,12 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		6103BD081D5AEF09003EAC76 /* PSSmiles.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PSSmiles.h; sourceTree = "<group>"; };
+		6103BD091D5AEF09003EAC76 /* PSSmiles.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSSmiles.m; sourceTree = "<group>"; };
+		6103BD0C1D5AF00D003EAC76 /* PSSmilesData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PSSmilesData.h; sourceTree = "<group>"; };
+		6103BD0D1D5AF00D003EAC76 /* PSSmilesData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSSmilesData.m; sourceTree = "<group>"; };
+		6103BD121D5AF131003EAC76 /* PSSmilesAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PSSmilesAPI.h; sourceTree = "<group>"; };
+		6103BD131D5AF131003EAC76 /* PSSmilesAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSSmilesAPI.m; sourceTree = "<group>"; };
 		6112EF2C1D585B5A005BD8C9 /* KGModal_G.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KGModal_G.h; sourceTree = "<group>"; };
 		6112EF2D1D585B5A005BD8C9 /* KGModal_G.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KGModal_G.m; sourceTree = "<group>"; };
 		614A68F41D589410007FC991 /* SVHTTPClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVHTTPClient.h; sourceTree = "<group>"; };
@@ -134,6 +146,19 @@
 				EE489BA01E80E61FEC7EE600 /* Pods-GamificationLib.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		6103BD111D5AF111003EAC76 /* Smiles */ = {
+			isa = PBXGroup;
+			children = (
+				6103BD121D5AF131003EAC76 /* PSSmilesAPI.h */,
+				6103BD131D5AF131003EAC76 /* PSSmilesAPI.m */,
+				6103BD0C1D5AF00D003EAC76 /* PSSmilesData.h */,
+				6103BD0D1D5AF00D003EAC76 /* PSSmilesData.m */,
+				6103BD081D5AEF09003EAC76 /* PSSmiles.h */,
+				6103BD091D5AEF09003EAC76 /* PSSmiles.m */,
+			);
+			name = Smiles;
 			sourceTree = "<group>";
 		};
 		6112EF2B1D585A9B005BD8C9 /* ExternalLibs */ = {
@@ -207,6 +232,7 @@
 		F125FC8A1B415C5B00340306 /* Lib */ = {
 			isa = PBXGroup;
 			children = (
+				6103BD111D5AF111003EAC76 /* Smiles */,
 				6112EF2B1D585A9B005BD8C9 /* ExternalLibs */,
 				F151F62B1B4E6D870087D52A /* AddActionAndPoints */,
 				F13A3A0B1B427E210075CBC0 /* PSUserBadgesAndLevels.h */,
@@ -269,6 +295,7 @@
 			files = (
 				61B28AFB1D1BAE5D00914DEA /* GamificationLib.h in Headers */,
 				613B34C81D1BAE1A0097179E /* ActionButtons.h in Headers */,
+				6103BD141D5AF131003EAC76 /* PSSmilesAPI.h in Headers */,
 				613B34C91D1BAE1A0097179E /* ActionButtons+DAO.h in Headers */,
 				613B34CA1D1BAE1A0097179E /* AllActionsView.h in Headers */,
 				613B34CB1D1BAE1A0097179E /* PSUserBadgesAndLevels.h in Headers */,
@@ -283,6 +310,8 @@
 				613B34D21D1BAE1A0097179E /* PSDateTimeUtil.h in Headers */,
 				613B34D31D1BAE1A0097179E /* PSHTTPClient.h in Headers */,
 				614A68F81D589410007FC991 /* SVHTTPClient.h in Headers */,
+				6103BD0E1D5AF00D003EAC76 /* PSSmilesData.h in Headers */,
+				6103BD0A1D5AEF09003EAC76 /* PSSmiles.h in Headers */,
 				613B34D41D1BAE1A0097179E /* PSLevelInfo.h in Headers */,
 				614A68FE1D589FD8007FC991 /* PSBadgesInfo.h in Headers */,
 				613B34D51D1BAE1A0097179E /* PSPointsSystemConstant.h in Headers */,
@@ -386,6 +415,7 @@
 				F125FCAC1B415C6400340306 /* PSPointSystemAction.m in Sources */,
 				614A68FF1D589FD8007FC991 /* PSBadgesInfo.m in Sources */,
 				F125FCA31B415C6400340306 /* GHActionButton.m in Sources */,
+				6103BD151D5AF131003EAC76 /* PSSmilesAPI.m in Sources */,
 				614A68F91D589410007FC991 /* SVHTTPClient.m in Sources */,
 				6112EF2F1D585B5A005BD8C9 /* KGModal_G.m in Sources */,
 				F125FCAB1B415C6400340306 /* PSLevelInfo.m in Sources */,
@@ -395,10 +425,12 @@
 				F125FC761B415AD700340306 /* GamificationLib.m in Sources */,
 				F13A3A0D1B427E210075CBC0 /* PSUserBadgesAndLevels.m in Sources */,
 				F125FCAA1B415C6400340306 /* PSHTTPClient.m in Sources */,
+				6103BD0F1D5AF00D003EAC76 /* PSSmilesData.m in Sources */,
 				F125FCA71B415C6400340306 /* PSAlertView.m in Sources */,
 				F125FCB91B4160A800340306 /* ActionButtons+DAO.m in Sources */,
 				F125FCC21B41649200340306 /* GamificationLib_db.xcdatamodeld in Sources */,
 				F125FCB81B4160A800340306 /* ActionButtons.m in Sources */,
+				6103BD0B1D5AEF09003EAC76 /* PSSmiles.m in Sources */,
 				614A68FB1D589410007FC991 /* SVHTTPRequest.m in Sources */,
 				F125FCA41B415C6400340306 /* PSAction.m in Sources */,
 				F125FCA81B415C6400340306 /* PSAPI.m in Sources */,

@@ -29,6 +29,9 @@
 #define PS_API_GET_BADGES_INFO @"getbadgesinfo"
 #define PS_PARAM_BADGES_LEVELS @"badges_levels"
 
+//Smiles
+#define PS_API_GET_SMILES @"get_smiles"
+
 // Leaderboard
 #define PS_API_GET_ALL_LEADERBOARDS @"get_leaderboard"
 #define PS_API_GET_LEADERBOARD_USERS @"get_leaderboard_actions"
