@@ -15,6 +15,7 @@
 @property (nonatomic, strong) NSString<Optional> *type;
 @property (nonatomic, strong) NSString<Optional> *reward_name;
 @property (nonatomic, strong) NSString<Optional> *smile_desc;
+@property (nonatomic, strong) NSNumber<Optional> *show_buy_button;
 
 
 @end
