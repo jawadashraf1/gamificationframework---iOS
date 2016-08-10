@@ -17,5 +17,7 @@
 @property (nonatomic, strong) NSString<Optional> *smile_desc;
 @property (nonatomic, strong) NSNumber<Optional> *show_buy_button;
 
+@property (nonatomic, strong) NSDictionary<Optional> *apiparams;
+
 
 @end

@@ -122,6 +122,8 @@
     NSString *userName  = [[NSUserDefaults standardUserDefaults] objectForKey:@"userName"];
     NSNumber *email    = [[NSUserDefaults standardUserDefaults] objectForKey:@"email"];
     
+    
+    
     if(!secTok){
         return nil;
     }
@@ -145,6 +147,7 @@
     [parameters setObject:userName   forKey:@"username"];
     [parameters setObject:email      forKey:@"email"];
     [parameters setObject:[self getFormattedDate]  forKey:@"created_date"];
+    [parameters setObject:[self getDEVICE_LANGUAGE] forKey:@"lang"];
     
     return parameters;
 }
@@ -157,6 +160,22 @@
     [dateFormat setTimeZone:[NSTimeZone systemTimeZone]];
     
     return [dateFormat stringFromDate:[NSDate date]];
+}
+
+
++(NSString *)getDEVICE_LANGUAGE{
+    
+    NSString  *langId = [[NSLocale preferredLanguages] objectAtIndex:0];
+    NSDictionary *components = [NSLocale componentsFromLocaleIdentifier:langId];
+    NSString *languageDesignator = components[NSLocaleLanguageCode];
+    
+    if([languageDesignator isEqualToString:@"el"]){
+        return languageDesignator;
+    } else if([languageDesignator isEqualToString:@"ar"]){
+        return languageDesignator;
+    } else {
+        return @"en";
+    }
 }
 
 

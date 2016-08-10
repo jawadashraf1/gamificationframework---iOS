@@ -11,7 +11,7 @@
 @implementation PSSmilesAPI
 
 
-+(void) getSmiles:(void (^)(id object,NSString *error))completion{
++(void) getSmiles:(NSNumber *) is_profile_list type:(NSString *) type  completion:(void (^)(id object,NSString *error))completion{
     
     NSDictionary *parameters = [self getDefaultParams];
     
@@ -19,6 +19,8 @@
         return;
     }
     
+    [parameters setValue:is_profile_list forKey:@"is_profile_list"];
+    [parameters setValue:type forKey:@"smile_type"];
     [self sendRequest:PS_API_GET_SMILES parameters:parameters completion:^(id object, NSString *error) {
         if(object){
             
@@ -36,6 +38,11 @@
             completion(nil,error);
         }
     }];
+}
+
+
++(void) getSmilesBurnForStoreListing:(void (^)(id object,NSString *error))completion{
+    [self getSmiles:[NSNumber numberWithBool:YES] type:@"BURN" completion:completion];
 }
 
 

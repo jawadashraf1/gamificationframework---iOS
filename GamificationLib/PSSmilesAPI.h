@@ -20,6 +20,6 @@
 @property (nonatomic, strong) PSSmilesData<Optional> *data;
 
 
-+(void) getSmiles:(void (^)(id object,NSString *error))completion;
++(void) getSmilesBurnForStoreListing:(void (^)(id object,NSString *error))completion;
 
 @end
