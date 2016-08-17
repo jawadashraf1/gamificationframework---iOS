@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-
+#import "PSActionResponse.h"
 #import "PSPointSystemAction.h"
 #import "PSUserBadgesAndLevels.h"
 #import "AllActionsView.h"
@@ -15,6 +15,7 @@
 #import "PSBadgesInfo.h"
 #import "PSSmilesAPI.h"
 #import "PSAction.h"
+
 
 @interface GamificationLib : NSObject
 

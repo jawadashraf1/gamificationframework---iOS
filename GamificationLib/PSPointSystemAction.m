@@ -93,6 +93,18 @@
     }
 }
 
+-(void)performActionToLog:(NSString *) identifierTemp params:(NSMutableDictionary *) params showDefaultAlert:(BOOL) showDefaultAlert completionAction:(void (^)(bool success,PSActionResponse *response))completionAction{
+    
+    NSString *identifier            = identifierTemp;
+    PSAction * selectedActionInfo   = [PSAction getActionInfo:identifier   user_id:[NSNumber numberWithInt:0]];
+    kActionTypes actionType         = (kActionTypes)[selectedActionInfo.action_type integerValue];
+    
+    if ((actionType == kSTANDALONE && [selectedActionInfo.is_badge intValue] == 0) || actionType == kGENERTIC || actionType == kSMILES) {
+        NSLog(@"Action: %@",selectedActionInfo.identifier);
+        [self sendActionWithoutShowNotification:selectedActionInfo params:params completionAction:completionAction];
+    }
+}
+
 -(void)saveSecretKeyAndUserId{
     [[NSUserDefaults standardUserDefaults] setObject:self.secretKey forKey:@"secretKey"];
     [[NSUserDefaults standardUserDefaults] setObject:self.userId    forKey:@"userId"];
@@ -124,6 +136,20 @@
                 completionAction(isSuccess);
         }
         
+        
+    }];
+}
+
+
+-(void) sendActionWithoutShowNotification:(PSAction *) actionInfo params:(NSMutableDictionary *) params completionAction:(void (^)(bool success,PSActionResponse *response))completionAction{
+    [PSAction addAction:[NSNumber numberWithInt:[actionInfo.action_type intValue]] info_id:actionInfo.button_id points:actionInfo.points params:params completion:^(id object, NSString *error) {
+        
+        if(object){
+            PSActionResponse *response  = (PSActionResponse *) object;
+            completionAction(YES,response);
+        } else {
+            completionAction(NO,nil);
+        }
         
     }];
 }

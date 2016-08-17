@@ -19,6 +19,7 @@ typedef enum {
 #import <Foundation/Foundation.h>
 #import "PSUserBadgesAndLevels.h"
 #import <CoreData/CoreData.h>
+#import "PSActionResponse.h"
 
 @interface PSPointSystemAction : NSObject
 
@@ -42,5 +43,5 @@ typedef enum {
 -(void)performActionToLog:(NSString *) identifierTemp params:(NSMutableDictionary *) params completionAction:(void (^)(bool success))completionAction;
 -(void)getAllLeaderBoardsWithCompletionHandler:(void (^)(NSString *error, NSArray *arrayLeaderboards))handler ;
 -(void)getLeaderBoardsDetailsForId:(NSString *)leaderboardId WithCompletionHandler:(void (^)(NSString *error, NSArray *arrayLeaderboards))handler;
-
+-(void)performActionToLog:(NSString *) identifierTemp params:(NSMutableDictionary *) params showDefaultAlert:(BOOL) showDefaultAlert completionAction:(void (^)(bool success,PSActionResponse *response))completionAction;
 @end
