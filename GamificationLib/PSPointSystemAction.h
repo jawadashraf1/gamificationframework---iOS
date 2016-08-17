@@ -10,7 +10,8 @@ typedef enum {
     // Not associated with levels etc
     kSTANDALONE=1,
     // Associated with levels and missions
-    kGENERTIC=2
+    kGENERTIC=2,
+    kSMILES=3
     
 }kActionTypes;
 
@@ -41,4 +42,5 @@ typedef enum {
 -(void)performActionToLog:(NSString *) identifierTemp params:(NSMutableDictionary *) params completionAction:(void (^)(bool success))completionAction;
 -(void)getAllLeaderBoardsWithCompletionHandler:(void (^)(NSString *error, NSArray *arrayLeaderboards))handler ;
 -(void)getLeaderBoardsDetailsForId:(NSString *)leaderboardId WithCompletionHandler:(void (^)(NSString *error, NSArray *arrayLeaderboards))handler;
+
 @end

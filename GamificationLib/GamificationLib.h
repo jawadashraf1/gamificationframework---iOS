@@ -14,6 +14,7 @@
 #import "PSLevelInfo.h"
 #import "PSBadgesInfo.h"
 #import "PSSmilesAPI.h"
+#import "PSAction.h"
 
 @interface GamificationLib : NSObject
 
