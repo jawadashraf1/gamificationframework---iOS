@@ -36,20 +36,22 @@
         
         if(!error){
             
+            if(responseobject && [responseobject isKindOfClass:[NSDictionary class]]){
             
-            NSDictionary *responseDict= (NSDictionary *)responseobject;//[NSJSONSerialization JSONObjectWithData:responseobject options:NSJSONReadingMutableContainers error:nil];
-            
-            if ([[responseDict objectForKey:PP_PARAM_SUCCESS] boolValue]==true) {
-                id obj = [[responseDict valueForKey:PP_PARAM_DATA] valueForKey:paramName];
-                if(obj!=(id)[NSNull null]){
-                    completion (obj,nil);
-                }else{
-                    completion (nil,@"No data found");
+                NSDictionary *responseDict= (NSDictionary *)responseobject;//[NSJSONSerialization JSONObjectWithData:responseobject options:NSJSONReadingMutableContainers error:nil];
+                
+                if ([[responseDict objectForKey:PP_PARAM_SUCCESS] boolValue]==true) {
+                    id obj = [[responseDict valueForKey:PP_PARAM_DATA] valueForKey:paramName];
+                    if(obj!=(id)[NSNull null]){
+                        completion (obj,nil);
+                    }else{
+                        completion (nil,@"No data found");
+                    }
+                } else{
+                    completion (nil,[responseDict valueForKey:PP_PARAM_MESSAGE]);
                 }
-            } else{
-                completion (nil,[responseDict valueForKey:PP_PARAM_MESSAGE]);
+                
             }
-
             
         } else {
             completion (nil,error.localizedDescription);
