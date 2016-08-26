@@ -18,10 +18,6 @@
 -(id)initWithKey:(NSString *)z_SecretKey andUserId:(NSNumber *)z_userId andUserName:(NSString *)z_UserName andEmail:(NSString *)z_Email{
     self = [super init];
     if (self) {
-        //Setting up Magical Record to Data Saving
-//        [MagicalRecord setupCoreDataStack];
-//        [CoreDataManager sharedManager].modelName = @"GamificationLib";
-//        [CoreDataManager sharedManager].databaseName = @"GamificationLib";
         self.secretKey              = z_SecretKey;
         self.userId                 = z_userId;
         self.userName               = z_UserName;
@@ -34,10 +30,6 @@
 
 
 -(void) setKeyInfo:(NSString *)z_SecretKey andUserId:(NSNumber *)z_userId andUserName:(NSString *)z_UserName andEmail:(NSString *)z_Email{
-        //Setting up Magical Record to Data Saving
-//        [MagicalRecord setupCoreDataStack];
-//        [CoreDataManager sharedManager].modelName = @"GamificationLib";
-//        [CoreDataManager sharedManager].databaseName = @"GamificationLib";
         self.secretKey              = z_SecretKey;
         self.userId                 = z_userId;
         self.userName               = z_UserName;
@@ -46,6 +38,18 @@
         [PSAction loadAllActions];
     
 }
+
+-(void) setKeyInfo:(NSString *)z_SecretKey andUserId:(NSNumber *)z_userId andUserName:(NSString *)z_UserName andEmail:(NSString *)z_Email baseUrl:(NSString *)baseUrl{
+    self.secretKey              = z_SecretKey;
+    self.userId                 = z_userId;
+    self.userName               = z_UserName;
+    self.email                  = z_Email;
+    self.baseUrl = baseUrl;
+    [self saveSecretKeyAndUserId];
+    [PSAction loadAllActions];
+    
+}
+
 
 //** Read Plist file from Main Bundle to get Array of its contents
 - (NSDictionary *)getDictionaryFromPlistFileWithName:(NSString *)fileName {
@@ -110,6 +114,10 @@
     [[NSUserDefaults standardUserDefaults] setObject:self.userId    forKey:@"userId"];
     [[NSUserDefaults standardUserDefaults] setObject:self.userName    forKey:@"userName"];
     [[NSUserDefaults standardUserDefaults] setObject:self.email    forKey:@"email"];
+    
+    if(self.baseUrl){
+        [[NSUserDefaults standardUserDefaults] setObject:self.baseUrl forKey:@"baseURL"];
+    }
     
     [[NSUserDefaults standardUserDefaults] synchronize];
     self.dictActions                = [[NSDictionary alloc] init];

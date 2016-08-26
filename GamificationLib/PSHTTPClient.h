@@ -14,18 +14,7 @@
 
 +(PSHTTPClient *) sharedClient;
 
-//-(void)postRequestDataWithMethodName:(NSString*)methodName withParameters:(NSDictionary*)parameters withImageData:(NSData*)data
-//                             success:(void (^)(AFHTTPRequestOperation *operation, id responseObject))success
-//                             failure:(void (^)(AFHTTPRequestOperation *operation, NSError *error))failure;
-//
-//-(void)postRequestDataWithMethodName:(NSString*)methodName withParameters:(NSDictionary*)parameters withImageData:(NSData*)data keyword:(NSString *)dataKeyword
-//                             success:(void (^)(AFHTTPRequestOperation *operation, id responseObject))success
-//                             failure:(void (^)(AFHTTPRequestOperation *operation, NSError *error))failure;
-//
-//-(void)getRequestWithMethodName:(NSString*)methodName withParameters:(NSDictionary*)parameters
-//                        success:(void (^)(AFHTTPRequestOperation *operation, id responseObject))success
-//                        failure:(void (^)(AFHTTPRequestOperation *operation, NSError *error))failure;
-
++(NSString*)getStringFromPlistWithKey:(NSString*)key;
 -(void)sendRequest:(NSString *)apiName paramName:(NSString *) paramName parameters:(NSDictionary *)parameters data:(NSData *)imgData completion:(void (^)(id object, NSError *error))completion ;
 
 @end

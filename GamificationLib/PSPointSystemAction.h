@@ -30,6 +30,7 @@ typedef enum {
 @property (nonatomic, strong) NSNumber *userId;
 @property (nonatomic, strong) NSString *userName;
 @property (nonatomic, strong) NSString *email;
+@property (nonatomic, strong) NSString *baseUrl;
 
 
 @property (readonly, strong, nonatomic) NSManagedObjectContext *managedObjectContext;
@@ -39,6 +40,7 @@ typedef enum {
 
 -(id)initWithKey:(NSString *)z_SecretKey andUserId:(NSNumber *)z_userId andUserName:(NSString *)z_UserName andEmail:(NSString *)z_Email;
 -(void) setKeyInfo:(NSString *)z_SecretKey andUserId:(NSNumber *)z_userId andUserName:(NSString *)z_UserName andEmail:(NSString *)z_Email;
+-(void) setKeyInfo:(NSString *)z_SecretKey andUserId:(NSNumber *)z_userId andUserName:(NSString *)z_UserName andEmail:(NSString *)z_Email baseUrl:(NSString *)baseUrl;
 +(PSPointSystemAction *) sharedAction;
 -(void)performActionToLog:(NSString *) identifierTemp params:(NSMutableDictionary *) params completionAction:(void (^)(bool success))completionAction;
 -(void)getAllLeaderBoardsWithCompletionHandler:(void (^)(NSString *error, NSArray *arrayLeaderboards))handler ;
