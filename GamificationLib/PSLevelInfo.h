@@ -19,7 +19,7 @@
 @property (nonatomic, strong) NSNumber<Optional> * is_latest_level_earn;
 @property (nonatomic, strong) NSString<Optional> * level_title;
 @property (nonatomic, strong) NSString<Optional> * level_sub_title;
-
+@property (nonatomic, strong) NSNumber<Optional> * current_smiles;
 +(void) getLevelsInfo:(void (^)(id object,NSString *error))completion;
 
 @end
