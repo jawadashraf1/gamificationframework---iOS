@@ -107,11 +107,25 @@
 
 +(void) deleteAllActions{
     
-    NSFetchRequest *request = [[NSFetchRequest alloc] initWithEntityName:@"ActionButtons"];
-    NSBatchDeleteRequest *delete = [[NSBatchDeleteRequest alloc] initWithFetchRequest:request];
     
-    NSError *deleteError = nil;
-    [[PSPointSystemAction sharedAction].managedObjectContext.persistentStoreCoordinator executeRequest:delete withContext:[PSPointSystemAction sharedAction].managedObjectContext error:&deleteError];
+    NSFetchRequest *actionsRequest = [[NSFetchRequest alloc] init];
+    [actionsRequest setEntity:[NSEntityDescription entityForName:@"ActionButtons" inManagedObjectContext:[PSPointSystemAction sharedAction].managedObjectContext]];
+    [actionsRequest setIncludesPropertyValues:NO]; //only fetch the managedObjectID
+    
+    NSError *error = nil;
+    NSArray *actions = [[PSPointSystemAction sharedAction].managedObjectContext executeFetchRequest:actionsRequest error:&error];
+    //error handling goes here
+    for (NSManagedObject *action in actions) {
+        [[PSPointSystemAction sharedAction].managedObjectContext deleteObject:action];
+    }
+    NSError *saveError = nil;
+    [[PSPointSystemAction sharedAction].managedObjectContext save:&saveError];
+    
+//    NSFetchRequest *request = [[NSFetchRequest alloc] initWithEntityName:@"ActionButtons"];
+//    NSBatchDeleteRequest *delete = [[NSBatchDeleteRequest alloc] initWithFetchRequest:request];
+//    
+//    NSError *deleteError = nil;
+//    [[PSPointSystemAction sharedAction].managedObjectContext.persistentStoreCoordinator executeRequest:delete withContext:[PSPointSystemAction sharedAction].managedObjectContext error:&deleteError];
     
     
     //    [ActionButtons deleteAllInContext:[PSPointSystemAction sharedAction].managedObjectContext];
