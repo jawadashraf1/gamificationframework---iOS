@@ -175,6 +175,8 @@
         return languageDesignator;
     } else if([languageDesignator isEqualToString:@"ar"]){
         return languageDesignator;
+    } else if([languageDesignator isEqualToString:@"zh"]){
+        return @"cn";
     } else {
         return @"en";
     }
