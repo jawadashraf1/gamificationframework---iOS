@@ -12,6 +12,7 @@
 
 @property (nonatomic, strong) NSNumber<Optional> * level_id;
 @property (nonatomic, strong) NSString<Optional> * level_name;
+@property (nonatomic, strong) NSString<Optional> * name_en;
 @property (nonatomic, strong) NSString<Optional> * level_desc;
 @property (nonatomic, strong) NSString<Optional> * level_img;
 @property (nonatomic, strong) NSNumber<Optional> * level_total_points;

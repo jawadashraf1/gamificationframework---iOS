@@ -10,7 +10,9 @@
 
 @interface PSBadgesInfo : PSAPI
 
+@property (nonatomic, strong) NSNumber<Optional> * badge_id;
 @property (nonatomic, strong) NSString<Optional> * name;
+@property (nonatomic, strong) NSString<Optional> * name_en;
 @property (nonatomic, strong) NSString<Optional> * desc;
 @property (nonatomic, strong) NSString<Optional> * image_url;
 @property (nonatomic, strong) NSNumber<Optional> * is_earned;
