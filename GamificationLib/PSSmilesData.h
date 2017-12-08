@@ -15,6 +15,7 @@
 
 @interface PSSmilesData : PSAPI
 
+@property (nonatomic, strong) NSNumber<Optional> *is_show_smilesinfosection;
 @property (nonatomic, strong) NSNumber<Optional> *current_smiles;
 @property (nonatomic, strong) NSNumber<Optional> *expired_smiles;
 @property (nonatomic, strong) NSArray<PSSmiles,Optional> *smiles;
