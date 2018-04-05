@@ -51,18 +51,16 @@
     
 }
 
--(void) setKeyInfo:(NSString *)z_SecretKey andUserId:(NSNumber *)z_userId andUserName:(NSString *)z_UserName andEmail:(NSString *)z_Email b_user:(NSString *) b_user b_password:(NSString *) b_password {
+-(void) setKeyInfo:(NSString *)z_SecretKey andUserId:(NSNumber *)z_userId andUserName:(NSString *)z_UserName andEmail:(NSString *)z_Email baseUrl:(NSString *)baseUrl b_user:(NSString *) b_user b_password:(NSString *) b_password{
     self.secretKey              = z_SecretKey;
     self.userId                 = z_userId;
     self.userName               = z_UserName;
     self.email                  = z_Email;
-    
     self.b_pwd                  = b_password;
     self.b_uname                = b_user;
-    
+    self.baseUrl = baseUrl;
     [self saveSecretKeyAndUserId];
     [PSAction loadAllActions];
-    
 }
 
 

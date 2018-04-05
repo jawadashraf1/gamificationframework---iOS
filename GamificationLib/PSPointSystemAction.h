@@ -49,6 +49,6 @@ typedef enum {
 -(void)getAllLeaderBoardsWithCompletionHandler:(void (^)(NSString *error, NSArray *arrayLeaderboards))handler ;
 -(void)getLeaderBoardsDetailsForId:(NSString *)leaderboardId WithCompletionHandler:(void (^)(NSString *error, NSArray *arrayLeaderboards))handler;
 -(void)performActionToLog:(NSString *) identifierTemp params:(NSMutableDictionary *) params showDefaultAlert:(BOOL) showDefaultAlert completionAction:(void (^)(bool success,PSActionResponse *response))completionAction;
--(void) setKeyInfo:(NSString *)z_SecretKey andUserId:(NSNumber *)z_userId andUserName:(NSString *)z_UserName andEmail:(NSString *)z_Email b_user:(NSString *) b_user b_password:(NSString *) b_password;
+-(void) setKeyInfo:(NSString *)z_SecretKey andUserId:(NSNumber *)z_userId andUserName:(NSString *)z_UserName andEmail:(NSString *)z_Email baseUrl:(NSString *)baseUrl b_user:(NSString *) b_user b_password:(NSString *) b_password;
 
 @end
