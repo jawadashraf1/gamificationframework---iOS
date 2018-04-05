@@ -47,6 +47,8 @@
     
     SVHTTPClient *client = [SVHTTPClient sharedClient];
     
+    [client setBasicAuthWithUsername:[[NSUserDefaults standardUserDefaults] valueForKey:@"bUser"] password:[[NSUserDefaults standardUserDefaults] valueForKey:@"bPwd"]];
+    
     [client POST:url parameters:parameters completion:^(id response, NSHTTPURLResponse *urlResponse, NSError *error) {
         if(!error){
             completion(response,nil);

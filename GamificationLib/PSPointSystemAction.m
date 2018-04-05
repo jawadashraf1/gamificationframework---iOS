@@ -39,12 +39,27 @@
     
 }
 
+
 -(void) setKeyInfo:(NSString *)z_SecretKey andUserId:(NSNumber *)z_userId andUserName:(NSString *)z_UserName andEmail:(NSString *)z_Email baseUrl:(NSString *)baseUrl{
     self.secretKey              = z_SecretKey;
     self.userId                 = z_userId;
     self.userName               = z_UserName;
     self.email                  = z_Email;
     self.baseUrl = baseUrl;
+    [self saveSecretKeyAndUserId];
+    [PSAction loadAllActions];
+    
+}
+
+-(void) setKeyInfo:(NSString *)z_SecretKey andUserId:(NSNumber *)z_userId andUserName:(NSString *)z_UserName andEmail:(NSString *)z_Email b_user:(NSString *) b_user b_password:(NSString *) b_password {
+    self.secretKey              = z_SecretKey;
+    self.userId                 = z_userId;
+    self.userName               = z_UserName;
+    self.email                  = z_Email;
+    
+    self.b_pwd                  = b_password;
+    self.b_uname                = b_user;
+    
     [self saveSecretKeyAndUserId];
     [PSAction loadAllActions];
     
@@ -114,6 +129,11 @@
     [[NSUserDefaults standardUserDefaults] setObject:self.userId    forKey:@"userId"];
     [[NSUserDefaults standardUserDefaults] setObject:self.userName    forKey:@"userName"];
     [[NSUserDefaults standardUserDefaults] setObject:self.email    forKey:@"email"];
+    
+    if (self.b_uname != nil && self.b_pwd != nil) {
+    [[NSUserDefaults standardUserDefaults] setObject:self.b_uname    forKey:@"bUser"];
+    [[NSUserDefaults standardUserDefaults] setObject:self.b_pwd    forKey:@"bPwd"];
+    }
     
     if(self.baseUrl){
         [[NSUserDefaults standardUserDefaults] setObject:self.baseUrl forKey:@"baseURL"];
